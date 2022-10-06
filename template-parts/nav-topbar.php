@@ -13,6 +13,6 @@
 		</ul>
 	</div>
 	<div class="top-bar-right">
-		<?php lacrosse_3d_top_nav(); ?>
+		<?php network_connex_top_nav(); ?>
 	</div>
 </div>

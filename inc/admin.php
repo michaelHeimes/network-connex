@@ -3,12 +3,12 @@
 
 /************* CUSTOMIZE ADMIN *******************/
 // Custom Backend Footer
-function lacrosse_3d_custom_admin_footer() {
+function network_connex_custom_admin_footer() {
 // 	_e('<span id="footer-thankyou">Developed by <a href="https://proprdesign.com/" target="_blank">Propr Design</a></span>.', 'network-connex');
 }
 
 // adding it to the admin area
-add_filter('admin_footer_text', 'lacrosse_3d_custom_admin_footer');
+add_filter('admin_footer_text', 'network_connex_custom_admin_footer');
 
 /* WP Editor
  */

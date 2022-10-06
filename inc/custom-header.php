@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package network-connex
+ * @package Network Connex
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses lacrosse_3d_header_style()
+ * @uses network_connex_header_style()
  */
-function lacrosse_3d_custom_header_setup() {
+function network_connex_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'lacrosse_3d_custom_header_args',
+			'network_connex_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'lacrosse_3d_header_style',
+				'wp-head-callback'   => 'network_connex_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'lacrosse_3d_custom_header_setup' );
+add_action( 'after_setup_theme', 'network_connex_custom_header_setup' );
 
-if ( ! function_exists( 'lacrosse_3d_header_style' ) ) :
+if ( ! function_exists( 'network_connex_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see lacrosse_3d_custom_header_setup().
+	 * @see network_connex_custom_header_setup().
 	 */
-	function lacrosse_3d_header_style() {
+	function network_connex_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

@@ -7,8 +7,15 @@
 ?>
 
 <div class="top-bar-wrap grid-container fluid">
+	
+	<div class="utility-nav grid-x align-middle align-right">
+		<?php network_connex_utility_nav();?>
+		<?php network_connex_social_links();?>
+	</div>
 
 	<div class="top-bar" id="top-bar-menu">
+		
+
 	
 		<div class="top-bar-left float-left">
 			
@@ -23,10 +30,10 @@
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 					<?php
 				endif;
-				$lacrosse_3d_description = get_bloginfo( 'description', 'display' );
-				if ( $lacrosse_3d_description || is_customize_preview() ) :
+				$network_connex_description = get_bloginfo( 'description', 'display' );
+				if ( $network_connex_description || is_customize_preview() ) :
 					?>
-					<p class="site-description"><?php echo $lacrosse_3d_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<p class="site-description"><?php echo $network_connex_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 		
@@ -44,7 +51,7 @@
 		<div class="top-bar-right show-for-tablet">
 			<div class="grid-x align-right">
 				<div class="cell shrink">
-					<?php lacrosse_3d_region_nav(); ?>	
+					<?php network_connex_top_nav(); ?>	
 				</div>
 			</div>
 		</div>

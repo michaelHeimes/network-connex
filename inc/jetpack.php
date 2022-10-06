@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package network-connex
+ * @package Network Connex
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function lacrosse_3d_jetpack_setup() {
+function network_connex_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'lacrosse_3d_infinite_scroll_render',
+			'render'    => 'network_connex_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -48,13 +48,13 @@ function lacrosse_3d_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'lacrosse_3d_jetpack_setup' );
+add_action( 'after_setup_theme', 'network_connex_jetpack_setup' );
 
-if ( ! function_exists( 'lacrosse_3d_infinite_scroll_render' ) ) :
+if ( ! function_exists( 'network_connex_infinite_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function lacrosse_3d_infinite_scroll_render() {
+	function network_connex_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :

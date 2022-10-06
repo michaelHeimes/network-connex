@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package network-connex
+ * @package Network Connex
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -19,7 +19,7 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function lacrosse_3d_setup() {
+function network_connex_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
@@ -77,7 +77,7 @@ function lacrosse_3d_setup() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'lacrosse_3d_custom_background_args',
+			'network_connex_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -104,7 +104,7 @@ function lacrosse_3d_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'lacrosse_3d_setup' );
+add_action( 'after_setup_theme', 'network_connex_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -113,17 +113,17 @@ add_action( 'after_setup_theme', 'lacrosse_3d_setup' );
  *
  * @global int $content_width
  */
-function lacrosse_3d_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'lacrosse_3d_content_width', 640 );
+function network_connex_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'network_connex_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'lacrosse_3d_content_width', 0 );
+add_action( 'after_setup_theme', 'network_connex_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function lacrosse_3d_widgets_init() {
+function network_connex_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'network-connex' ),
@@ -147,13 +147,13 @@ function lacrosse_3d_widgets_init() {
 	));
 	
 }
-add_action( 'widgets_init', 'lacrosse_3d_widgets_init' );
+add_action( 'widgets_init', 'network_connex_widgets_init' );
 
 
 /**
  * Enqueue scripts and styles.
  */
-function lacrosse_3d_scripts() {
+function network_connex_scripts() {
 	wp_enqueue_style( 'network-connex-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'network-connex-style', 'rtl', 'replace' );
 	
@@ -167,7 +167,7 @@ function lacrosse_3d_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'lacrosse_3d_scripts' );
+add_action( 'wp_enqueue_scripts', 'network_connex_scripts' );
 
 
 // Disable Tabelpress Stylesheet
