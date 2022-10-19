@@ -2,13 +2,13 @@
 	<div class="grid-container">
 		<div class="header grid-x grid-padding-x">
 			<div class="cell small-12 medium-auto">
-				<h2 class="m-0">News & Events</h2>
+				<h2>News & Events</h2>
 			</div>
-			<div class="cell small-12 medium-shrink">
+			<div class="cell small-12 medium-shrink show-for-medium">
 				<a class="button" href="#">View All News</a>
 			</div>
 		</div>
-		<div class="grid-x grid-padding-x small-up-1 medium-up-2 tablet-up-3">
+		<div class="grid-x grid-padding-x grid-20 small-up-1 medium-up-2 tablet-up-3">
 			
 			<?php			
 			$args = array(  
@@ -31,15 +31,19 @@
 				?>
 				
 				<div class="cell text-center color-white">
-					<article id="post-<?php the_ID(); ?>" <?php post_class('has-bg grid-x align-middle align-bottom'); ?> role="article">	
-						<a  class="color-white "href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-							<div class="bg" style="background-image: url('<?php echo $grid_image['url'];?>');"></div>
-							<div class="text-wrap relative">
-								<div class="date">
-									<?php echo get_the_date(' F m, Y ');?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('h-100'); ?> role="article">	
+						<a class="h-100 color-white grid-x flex-dir-column align-justify" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+							<div class="img-wrap">
+								<img src="<?php echo $grid_image['sizes']['post-thumb'];?>">
+							</div>
+							<div class="text-wrap h-100 relative">
+								<div class="inner h-100 white-bg">
+									<div class="date font-brandon">
+										<?php echo get_the_date(' F m, Y ');?>
+									</div>
+									<hr>
+									<h3 class="h5 color-black"><?php the_title();?></h3>
 								</div>
-								<br>
-								<h3 class="h5"><?php the_title();?></h3>
 							</div>
 						</a>
 					</article>
@@ -52,6 +56,11 @@
 			wp_reset_postdata(); 
 			?>
 
+		</div>
+		<div class="grid-x grid-padding-x hide-for-medium">
+			<div class="cell small-12 text-center">
+				<a class="button" href="#">View All News</a>
+			</div>
 		</div>
 	</div>
 </section>

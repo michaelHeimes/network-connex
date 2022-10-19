@@ -10,7 +10,9 @@
 			$image = $logo;
 			if( !empty( $image ) ): ?>
 			<div class="left cell small-12 tablet-6 text-center">
-				<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+				<div class="img-wrap">
+					<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+				</div>
 			</div>
 			<?php endif; ?>
 			<div class="cell small-12 tablet-6">

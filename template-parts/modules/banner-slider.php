@@ -10,10 +10,10 @@
 				$heading = $slide['heading'];
 				$text = $slide['text'];
 			?>
-			<div class="swiper-slide grid-x has-bg">
+			<div class="swiper-slide has-bg">
 				<div class="bg" style="background-image: url('<?php echo $background_image['url'];?>');"></div>
 				<div class="grid-container relative">
-					<div class="inner grid-x grid-padding-x align-middle">
+					<div class="inner grid-x grid-margin-x align-middle">
 						<div class="cell small-12 large-10 large-offset-1 text-center color-white">
 							<?php if( !empty($heading) ):?>
 								<h1 class="color-white"><?php echo $heading;?></h1>

@@ -126,7 +126,7 @@
     
     // Custom Functions
     
-    _app.blog_slider = function() {
+    _app.banner_slider = function() {
         
         if( $('.banner-slider').length ) {
             
@@ -135,6 +135,7 @@
                 loop: true,
                 slidesPerView: 1,
                 speed: 500,
+                spaceBetween: 0,
                 autoplay: {
                     delay: 7000,
                 },
@@ -158,7 +159,7 @@
         _app.display_on_load();
         
         // Custom Functions
-        _app.blog_slider();
+        _app.banner_slider();
     }
     
     

@@ -1,8 +1,13 @@
 header.site-header {
 	transition: transform .5s ease;
 	
+	.top-bar .top-bar-left, .top-bar .top-bar-right {
+		flex: 1 1 auto;
+		margin-right: auto;
+	}
+	
 	a {
-		font-family: brandon-grotesque, roboto, Helvetica, Roboto, Arial, sans-serif;
+		font-family: $font-brandon;
 		font-weight: 600;
 		color: $brand-blue;
 	}
@@ -17,13 +22,21 @@ header.site-header {
 			left: -0.9375rem;
 			right: -0.9375rem;
 		}
+		li {
+			width: auto;
+		}
+		#social-links {
+			a {
+				padding: 8px;
+			}
+		}
 	}
 	
 	#top-bar-menu {
 		
 		li.logo {
-			@include breakpoint(medium) {
-
+			@include breakpoint(small down) {
+				max-width: 140px;
 			}
 			@include breakpoint(tablet) {
 
@@ -111,7 +124,7 @@ header.site-header {
 				    right: 0;
 				    width: 36px;
 				    height: 4px;
-				    background-color: $white;
+				    background-color: $brand-blue;
 					transition: all .3s ease;
 				    
 				    &:nth-child(1) {

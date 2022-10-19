@@ -15,30 +15,30 @@
 					<div class="site-info">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x">
-								<div class="cell small-12">
+								<div class="cell small-12 tablet-3">
 									<?php 
 									$image = get_field('footer_logo', 'option');
 									if( !empty( $image ) ): ?>
-									<div class="top">
+									<div class="logo-wrap">
 										<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 									</div>
 									<?php endif; ?>
+								</div>
+								<div class="cell small-12 tablet-9">
 									<?php network_connex_footer_links();?>
-									<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>">
-										<?php
-										/* translators: %s: CMS name, i.e. WordPress. */
-										printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' );
-										?>
-									</a>
-									<span class="sep"> | </span>
-										<?php
-										/* translators: 1: Theme name, 2: Theme author. */
-										printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="https://automattic.com/">Automattic</a>' );
-										?>
 								</div>
 							</div>
 						</div>
 					</div><!-- .site-info -->
+					<div class="copyright light-gray-bg">
+						<div class="grid-container">
+							<div class="grid-x grid-padding-x">
+								<div class="cell small-12">
+									<p class="source-org copyright small text-center">&copy; <?php echo date('Y'); ?>, <?php bloginfo('name'); ?> | All Rights Reserved</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</footer><!-- #colophon -->
 					
 			</div><!-- #page -->

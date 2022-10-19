@@ -1,0 +1,36 @@
+.news-events {
+	padding-top: 10.2rem;
+	padding-bottom: 5.26rem;
+	h2 {
+		margin-bottom: 1.15em;
+	}
+	article {
+		.text-wrap {
+			padding: 0 14px;
+			margin-top: -40px;
+			flex: 1;
+			.inner {
+				box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+				border-radius: 4px;
+				padding: 1.45rem 1.5rem 2.2rem;
+				
+				.date {
+					font-weight: 600;
+					color: #797A7C;
+					text-transform: uppercase;
+					font-size: rem-calc(12);
+					line-height: 1.5;
+					letter-spacing: 0.14em;
+				}
+				hr {
+					width: 55px;
+					margin: 0.88rem auto 0.95rem;
+					border-bottom: 2px solid #3C8CB8;
+				}
+				h3 {
+					text-transform: none;
+				}
+			}
+		}
+	}
+}

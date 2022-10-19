@@ -1,13 +1,55 @@
 .featured-projects {
 	padding-top: 5.8rem;
+	padding-bottom: 3.5rem;
 	h2 {
 		margin-bottom: 1.25em;
 	}
 	article {
+
 		.inner.grid-x {
-			min-height: 23.231vw;
+			flex: 1;
+			min-height: 68.427vw;
+			@include breakpoint(medium) {
+				min-height: 23.231vw;
+			}
 			@include breakpoint(xlarge) {
 				min-height: 275px;	
+			}
+		}
+		.excerpt {
+			opacity: 0;
+			width: 100%;
+			min-height: 100%;
+			padding: 1.5rem;
+			background: linear-gradient(115.07deg, rgba(60, 140, 184, 0.9) 0%, rgba(60, 140, 184, 0.684) 100%);
+			transition: opacity .25s ease;
+			div {
+
+			}
+			span,
+			p {
+				max-width: 280px;
+				margin: auto;
+			}
+			span {
+				display: inline-block;
+				font-weight: 700;
+				font-size: rem-calc(12);
+				line-height: 1.5;
+				text-align: center;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				border-bottom: 2px solid $white;
+				margin: 1.1rem 0 0;
+				padding: 0 0 0.4rem;
+			}
+		}
+		.title-wrap {
+			padding-top: 1.2rem;
+		}
+		a:hover {
+			.excerpt {
+				opacity: 1;
 			}
 		}
 	}

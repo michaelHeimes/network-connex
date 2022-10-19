@@ -78,13 +78,15 @@
 @import "typography";
 @import "header";
 @import "footer";
+@import "helpers";
 
 // @import "_parts/banner";
 
 @import "_modules/banner";
-@import "_modules/banner-slider";
 @import "_modules/centered-copy";
 @import "_modules/blue-background-cta";
 @import "_modules/featured-projects";
+@import "_modules/news-events";
+@import "_modules/ctas-with-background-images";
 
 @import "_pages/home";

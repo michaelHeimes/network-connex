@@ -4,8 +4,8 @@
 	$background_color = get_sub_field('background_color');
 ?>
 <section class="module ctas-with-background-images <?php echo $background_color;?>-bg">
-	<div class="grid-container">
-		<div class="grid-x grid-padding-x align-middle small-up-1<?php if($ctas_count >= 2) { echo' medium-up-2';};?>">
+	<div class="grid-container fluid">
+		<div class="grid-x grid-padding-x grid-20 align-middle small-up-1<?php if($ctas_count >= 2) { echo' medium-up-2';};?>">
 			<?php foreach( $ctas as $cta ): 
 				$background_image =  $cta['background_image'];
 				$heading =  $cta['heading'];

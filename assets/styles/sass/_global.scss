@@ -77,7 +77,7 @@ svg {
 .button,
 button {
 	text-transform: uppercase;
-	font-family: brandon-grotesque, roboto, Helvetica, Roboto, Arial, sans-serif;
+	font-family: $font-brandon;
 	font-weight: 600;
 	font-size: rem-calc(14);
 	line-height: 1.1;

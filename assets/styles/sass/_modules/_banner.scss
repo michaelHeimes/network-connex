@@ -3,8 +3,11 @@
 	
 	p {
 		font-weight: 500;
-		font-size: rem-calc(28);
+		font-size: rem-calc(19.6);
 		line-height: 1.5;
+		@include breakpoint(medium) {
+			font-size: rem-calc(28);
+		}
 	}
 	
 	.banner-border {
@@ -42,6 +45,7 @@
 &.banner-slider {
 	.swiper-slide {
 		height: auto;
+		width: 100%;
 	}
 	.inner {
 		height: 100%;

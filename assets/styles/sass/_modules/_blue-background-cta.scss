@@ -1,6 +1,17 @@
 .blue-background-cta {
 	padding-top: 5.1rem;
 	padding-bottom: 4.67rem;
+	
+	@include breakpoint(medium down) {
+		.left {
+			margin-bottom: 3rem;
+		}
+	}
+	
+	.img-wrap {
+		max-width: 461px;
+		margin: auto;
+	}
 	.btn-wrap {
 		padding-top: 2.42rem;
 	}

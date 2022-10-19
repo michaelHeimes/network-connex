@@ -38,8 +38,11 @@ ul,
 ol,
 .p,
 p {
-	font-size: rem-calc(18);
+	font-size: rem-calc(16);
 	line-height: 1.6;
+	@include breakpoint(medium) {
+		font-size: rem-calc(18);
+	}
 }
 
 .color-white {
@@ -51,5 +54,11 @@ p {
 }
 
 .font-brandon {
-	font-family: brandon-grotesque, roboto, Helvetica, Roboto, Arial, sans-serif;
+	font-family: $font-brandon
+}
+
+small,
+.small {
+	font-size: rem-calc(12);
+	line-height: 1.1;
 }

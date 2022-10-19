@@ -30,7 +30,7 @@ function network_connex_utility_nav() {
 	wp_nav_menu(array(
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'utility-nav',					// Adding custom nav id
-		'menu_class'		=> 'medium-horizontal menu',	// Adding custom nav class
+		'menu_class'		=> 'medium-horizontal menu cell auto medium-shrink',	// Adding custom nav class
 		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown" data-hover-delay="20" data-closing-time="20" data-alignment="auto">%3$s</ul>',
 		'theme_location'	=> 'utility-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
@@ -85,7 +85,7 @@ function network_connex_social_links() {
 	wp_nav_menu(array(
 		'container'			=> 'false',				// Remove nav container
 		'menu_id'			=> 'social-links',		// Adding custom nav id
-		'menu_class'		=> 'menu',				// Adding custom nav class
+		'menu_class'		=> 'menu shrink',				// Adding custom nav class
 		'theme_location'	=> 'social-links',		// Where it's located in the theme
 		'depth'				=> 0,					// Limit the depth of the nav
 		'fallback_cb'		=> ''					// Fallback function
@@ -126,30 +126,8 @@ add_filter( 'nav_menu_css_class', 'required_active_nav_class', 10, 2 );
 		
 		// var_dump($args);
 		
-		if ( $args->theme_location == 'region-nav') {
-		
-			// loop
-			foreach( $items as &$item ) {
-				
-				// vars
-				$icon = get_field('region_badge', $item);
-				$size = 'full';						
-				// append icon
-				if( $icon ) {
-					
-					$item->title = '<span class="icon-title-wrap grid-x flex-dir-column align-middle align-center"><span class="icon" aria-hidden="true"><img src="' . $icon['url'] . '" alt="' . $icon['alt'] . '"></span><span class="title">' . $item->title . '</span></span>';
-					
-				}
-				
-			}
 			
-						
-			// return
-			return $items;		
-			
-		}
-			
-		elseif ( $args->theme_location == 'social-links') {
+		if ( $args->theme_location == 'social-links') {
 			
 			// loop
 			foreach( $items as &$item ) {
@@ -160,7 +138,7 @@ add_filter( 'nav_menu_css_class', 'required_active_nav_class', 10, 2 );
 				// append icon
 				if( $icon ) {
 					
-					$item->title = '<span class="icon" aria-hidden="true"><img class="style-svg" src="' . $icon['url'] . '" alt="' . $icon['alt'] . '"></span><span class="show-for-sr"' . $item->title . '</span>';
+					$item->title = '<span class="icon" aria-hidden="true"><img class="style-svg" src="' . $icon['url'] . '" alt="' . $icon['alt'] . '"></span><span class="show-for-sr">' . $item->title . '</span>';
 					
 				}
 				

@@ -1,0 +1,23 @@
+.ctas-with-background-images {
+	padding-top: 2.8125rem;
+	padding-bottom: 3.25rem;
+	.grid-container.fluid {
+		max-width: 1276px;
+	}
+	.inner {
+		min-height: 80vw;
+		@include breakpoint(medium) {
+			min-height: 42.9034vw;
+		}
+		padding: 3.5rem;
+		@include breakpoint(xlarge) {
+			min-height: 532px;
+		}
+		h2 {
+			margin-bottom: 0.25em;
+		}
+	}
+	.mask {
+		background: linear-gradient(180deg, rgba($black, .7) 0%, rgba(28, 26, 26, 0) 100%);
+	}
+}
