@@ -5,16 +5,28 @@
 ?>
 	
 	<?php 
-		if( have_rows('page_modules') ):
-			while ( have_rows('page_modules') ) : the_row();
+		if( have_rows('modules') ):
+			while ( have_rows('modules') ) : the_row();
 
-				// if( get_row_layout() == 'graphical_callout' ):
-				// 	get_template_part('template-parts/modules/graphical-callout');
-				// elseif( get_row_layout() == 'image_&_copy_card' ):
-				// 	get_template_part('template-parts/modules/part-image-copy-card');
-				// elseif( get_row_layout() == 'text' ):
-				// 	get_template_part('template-parts/modules/text');
-				// endif;
+				if( get_row_layout() == 'banner' ):
+					get_template_part('template-parts/modules/banner');
+				elseif( get_row_layout() == 'banner_slider' ):
+					get_template_part('template-parts/modules/banner-slider');
+				elseif( get_row_layout() == 'blue_background_cta' ):
+					get_template_part('template-parts/modules/blue-background-cta');
+				elseif( get_row_layout() == 'ctas_with_background_images' ):
+					get_template_part('template-parts/modules/ctas-with-background-images');
+				elseif( get_row_layout() == 'centered_copy' ):
+					get_template_part('template-parts/modules/centered-copy');
+				elseif( get_row_layout() == 'ctas_with_background_images' ):
+					get_template_part('template-parts/modules/ctas-with-background-images');
+				elseif( get_row_layout() == 'featured_projects' ):
+					get_template_part('template-parts/modules/featured-projects');
+				elseif( get_row_layout() == 'image_left_copy_right' ):
+					get_template_part('template-parts/modules/image-left-copy-right');
+				elseif( get_row_layout() == 'news_events' ):
+					get_template_part('template-parts/modules/news-events');
+				endif;
 	
 			endwhile;
 		endif;

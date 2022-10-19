@@ -16,10 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://use.typekit.net/zdj3xfv.css">
 
 	<?php wp_head(); ?>
 </head>
@@ -29,7 +27,7 @@
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'network-connex' ); ?></a>
 		
 			<div class="sticky-container">
-				<header class="site-header" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
+				<header class="site-header white-bg" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
 					<?php get_template_part( 'template-parts/nav', 'offcanvas-topbar' ); ?>
 				</header><!-- #masthead -->
 			</div>

@@ -1,0 +1,14 @@
+.featured-projects {
+	padding-top: 5.8rem;
+	h2 {
+		margin-bottom: 1.25em;
+	}
+	article {
+		.inner.grid-x {
+			min-height: 23.231vw;
+			@include breakpoint(xlarge) {
+				min-height: 275px;	
+			}
+		}
+	}
+}

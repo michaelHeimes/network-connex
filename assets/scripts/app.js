@@ -126,22 +126,28 @@
     
     // Custom Functions
     
-    _app.mobile_takover_nav = function() {
-        $(document).on('click', 'a#menu-toggle', function(){
+    _app.blog_slider = function() {
+        
+        if( $('.banner-slider').length ) {
             
-            if ( $(this).hasClass('clicked') ) {
-                $(this).removeClass('clicked');
-                $('#off-canvas').fadeOut(200);
+            const swiper = new Swiper('.banner-slider .swiper-container', {
+                // Optional parameters
+                loop: true,
+                slidesPerView: 1,
+                speed: 500,
+                autoplay: {
+                    delay: 7000,
+                },
+            });
             
-            } else {
-            
-                $(this).addClass('clicked');
-                $('#off-canvas').fadeIn(200);
-            
-            }
-            
-        });
-    }
+            $(".blog-slider .swiper-container").each(function(index, element){
+                const swiper = this.swiper;
+                swiper.update();
+            });
+        
+        }
+        
+    } 
             
     _app.init = function() {
         
@@ -152,7 +158,7 @@
         _app.display_on_load();
         
         // Custom Functions
-        //_app.mobile_takover_nav();
+        _app.blog_slider();
     }
     
     

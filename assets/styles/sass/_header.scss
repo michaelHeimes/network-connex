@@ -1,6 +1,24 @@
 header.site-header {
 	transition: transform .5s ease;
 	
+	a {
+		font-family: brandon-grotesque, roboto, Helvetica, Roboto, Arial, sans-serif;
+		font-weight: 600;
+		color: $brand-blue;
+	}
+	
+	.utility-nav {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			border: 0.25px solid $dark-gray;
+			left: -0.9375rem;
+			right: -0.9375rem;
+		}
+	}
+	
 	#top-bar-menu {
 		
 		li.logo {

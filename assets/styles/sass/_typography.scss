@@ -1,0 +1,55 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	text-transform: uppercase;
+}
+
+h2,
+.h2 {
+	letter-spacing: .1em;
+	margin-bottom: 0.77em;
+}
+
+h3,
+.h3 {
+	line-height: 1.3;
+	letter-spacing: 0.1em;
+	margin-bottom: 1.1em;
+}
+
+
+h4,
+.h4 {
+	line-height: 1.5;
+	letter-spacing: 0.14em;
+}
+
+.text-wrap,
+ul,
+ol,
+.p,
+p {
+	font-size: rem-calc(18);
+	line-height: 1.6;
+}
+
+.color-white {
+	color: $white;
+}
+
+.color-black {
+	color: $black;
+}
+
+.font-brandon {
+	font-family: brandon-grotesque, roboto, Helvetica, Roboto, Arial, sans-serif;
+}
