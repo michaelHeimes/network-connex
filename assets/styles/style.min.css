@@ -5718,12 +5718,12 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   text-align: center;
 }
 .menu .is-active > a {
-  background: #6BBE4A;
-  color: #1C1A1A;
+  background: transparent;
+  color: #1C365F;
 }
 .menu .active > a {
-  background: #6BBE4A;
-  color: #1C1A1A;
+  background: transparent;
+  color: #1C365F;
 }
 .menu.align-left {
   -webkit-box-pack: start;
@@ -9605,6 +9605,13 @@ header.site-header .utility-nav:after {
 header.site-header .utility-nav li {
   width: auto;
 }
+header.site-header .utility-nav li a {
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 header.site-header .utility-nav #social-links a {
   padding: 8px;
 }
@@ -9785,6 +9792,19 @@ footer#colophon .copyright p {
 }
 .banner .banner-border span svg {
   max-height: 131px;
+}
+.banner.default-banner .bg.mask {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.banner.default-banner .inner {
+  min-height: 355px;
+}
+.banner.default-banner .inner .cell {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.banner.default-banner.color-green .banner-border:before, .banner.default-banner.color-green .banner-border:after {
+  background-color: #6BBE4A;
 }
 .banner.banner-slider .swiper-slide {
   height: auto;

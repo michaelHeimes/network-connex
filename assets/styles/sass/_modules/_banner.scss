@@ -42,6 +42,29 @@
 		}
 	}
 	
+&.default-banner {
+	.bg.mask {
+		background-color: rgba($white, .5);
+	}
+	.inner {
+		min-height: 355px;
+		.cell {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+	}
+	
+&.color-green {
+	.banner-border {
+		&:before,
+		&:after {
+			background-color: $brand-green;
+		}
+	}
+}
+	
+}
+	
 &.banner-slider {
 	.swiper-slide {
 		height: auto;
