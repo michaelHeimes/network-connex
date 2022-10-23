@@ -8955,61 +8955,6 @@ Stylesheet: Global Stylesheet
 BACKGROUND COLORS
 *********************/
 /*********************
-HELPERS
-*********************/
-.has-bg {
-  position: relative;
-}
-.has-bg .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.relative {
-  position: relative;
-}
-
-.blue-bg {
-  background-color: #1C365F;
-}
-.blue-bg h2,
-.blue-bg h3,
-.blue-bg p {
-  color: #fff;
-}
-
-.light-gray-bg {
-  background-color: #F2F2F4;
-}
-
-.color-white {
-  color: #fff;
-}
-
-.m-0 {
-  margin: 0;
-}
-
-.grid-x.grid-16 .cell {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.grid-x.grid-20 .cell {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.white-bg {
-  background-color: #fff;
-}
-
-/*********************
 RE-USED ELEMENTS
 *********************/
 svg {
@@ -9543,6 +9488,7 @@ ul,
 ol,
 .p,
 p {
+  font-family: roboto, Helvetica, Roboto, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -9572,6 +9518,19 @@ small,
 .small {
   font-size: 0.75rem;
   line-height: 1.1;
+}
+
+.text-22,
+p.text-22 {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+@media print, screen and (min-width: 40em) {
+  .text-22,
+p.text-22 {
+    font-size: 1.375rem;
+  }
 }
 
 header.site-header {
@@ -9750,6 +9709,60 @@ footer#colophon .copyright p {
   height: 100%;
 }
 
+.has-bg {
+  position: relative;
+}
+.has-bg .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.relative {
+  position: relative;
+}
+
+.blue-bg {
+  background-color: #1C365F;
+}
+.blue-bg h2,
+.blue-bg h3,
+.blue-bg p {
+  color: #fff;
+}
+
+.light-gray-bg {
+  background-color: #F2F2F4;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.grid-x.grid-16 > .cell {
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 16px;
+}
+
+.grid-x.grid-20 > .cell {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.white-bg {
+  background-color: #fff;
+}
+
 .banner {
   overflow: hidden;
 }
@@ -9772,10 +9785,12 @@ footer#colophon .copyright p {
 .banner .banner-border:before, .banner .banner-border:after {
   content: "";
   display: block;
-  width: calc(50% - 50px);
+  width: calc(50% - 40px);
   position: absolute;
   height: 28px;
   background-color: #6BBE4A;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .banner .banner-border:before {
   left: 0;
@@ -9793,6 +9808,28 @@ footer#colophon .copyright p {
 .banner .banner-border span svg {
   max-height: 131px;
 }
+.banner .banner-border span svg path {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.banner[color-theme=color-theme-green] .banner-border:before, .banner[color-theme=color-theme-green] .banner-border:after {
+  background-color: #6BBE4A;
+}
+.banner[color-theme=color-theme-green] .banner-border svg path {
+  fill: #6BBE4A;
+}
+.banner[color-theme=color-theme-purple] .banner-border:before, .banner[color-theme=color-theme-purple] .banner-border:after {
+  background-color: #4A4B99;
+}
+.banner[color-theme=color-theme-purple] .banner-border svg path {
+  fill: #4A4B99;
+}
+.banner[color-theme=color-theme-sky-blue] .banner-border:before, .banner[color-theme=color-theme-sky-blue] .banner-border:after {
+  background-color: #3C8CB8;
+}
+.banner[color-theme=color-theme-sky-blue] .banner-border svg path {
+  fill: #3C8CB8;
+}
 .banner.default-banner .bg.mask {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -9802,9 +9839,6 @@ footer#colophon .copyright p {
 .banner.default-banner .inner .cell {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-.banner.default-banner.color-green .banner-border:before, .banner.default-banner.color-green .banner-border:after {
-  background-color: #6BBE4A;
 }
 .banner.banner-slider .swiper-slide {
   height: auto;
@@ -9964,6 +9998,170 @@ footer#colophon .copyright p {
 .ctas-with-background-images .mask {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(28, 26, 26, 0.7)), to(rgba(28, 26, 26, 0)));
   background: linear-gradient(180deg, rgba(28, 26, 26, 0.7) 0%, rgba(28, 26, 26, 0) 100%);
+}
+
+.team .team-wrap h2 {
+  margin-bottom: 1.48em;
+}
+.team .single-tm {
+  -webkit-transition: margin-bottom 0.25s ease 0.25s;
+  transition: margin-bottom 0.25s ease 0.25s;
+}
+.team .single-tm .inner a {
+  display: block;
+  position: relative;
+}
+.team .single-tm .inner a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3C8CB8;
+  -webkit-transform: translate(-5px, -5px);
+          transform: translate(-5px, -5px);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.team .single-tm .inner a:hover:before {
+  -webkit-transform: translate(5px, 5px);
+          transform: translate(5px, 5px);
+}
+.team .single-tm .inner .img-wrap .bg {
+  height: 78px;
+  top: auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(86.98%, #000000));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 86.98%);
+}
+.team .single-tm .inner .img-wrap .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.85rem 0.45rem;
+}
+.team .single-tm .inner .img-wrap .title .toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #6BBE4A;
+  border-radius: 3px;
+  margin-right: 1rem;
+}
+.team .single-tm .inner .img-wrap .title .toggle span {
+  display: block;
+  background-color: #fff;
+  width: 24px;
+  height: 2.75px;
+  border-radius: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(8.325px, 18.325px);
+          transform: translate(8.325px, 18.325px);
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+.team .single-tm .inner .img-wrap .title .toggle span:nth-child(2) {
+  -webkit-transform: translate(8.325px, 18.325px) rotate(90deg);
+          transform: translate(8.325px, 18.325px) rotate(90deg);
+}
+.team .single-tm .inner .img-wrap .title h3,
+.team .single-tm .inner .img-wrap .title h4 {
+  text-transform: none;
+  color: #fff;
+  font-weight: 400;
+}
+.team .single-tm .inner .img-wrap .title h3 {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+}
+.team .single-tm .inner .img-wrap .title h4 {
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+.team .single-tm .tm-bio {
+  padding: 3.78rem 0 3.2rem;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+.team .single-tm.bio-open {
+  -webkit-transition: margin-bottom 0.25s ease 0s;
+  transition: margin-bottom 0.25s ease 0s;
+}
+.team .single-tm.bio-open .inner .img-wrap .title .toggle span:nth-child(2) {
+  -webkit-transform: translate(8.325px, 18.325px) rotate(0deg);
+          transform: translate(8.325px, 18.325px) rotate(0deg);
+}
+.team .single-tm.bio-open .tm-bio {
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease 0.5s;
+  transition: opacity 0.25s ease 0.5s;
+}
+.team .single-tm.bio-open-only {
+  -webkit-transition: margin-bottom 0.25s ease 0.25s;
+  transition: margin-bottom 0.25s ease 0.25s;
+}
+.team .single-tm.bio-open-only .tm-bio {
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease 0.25s;
+  transition: opacity 0.25s ease 0.25s;
+}
+
+.facts-figures .bg.mask {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.facts-figures .grid-container {
+  max-width: 1405px;
+  padding: 31px 45px;
+  margin: auto;
+}
+.facts-figures .grid-x {
+  padding-top: 6.38rem;
+  padding-bottom: 2.75rem;
+}
+.facts-figures .grid-x .bg {
+  background: #4A4B99;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
+.facts-figures .grid-x > .cell {
+  margin-bottom: 2rem;
+}
+.facts-figures .grid-x > .cell p {
+  max-width: 176px;
+  margin: auto;
+}
+.facts-figures .grid-x > .cell .h1 {
+  font-size: 60px;
+  line-height: 1.15;
+  margin-bottom: 0.12em;
+}
+@media print, screen and (min-width: 40em) {
+  .facts-figures .grid-x > .cell .h1 {
+    font-size: 90px;
+  }
+}
+
+.services {
+  padding-top: 9.6rem;
+}
+.services .services-wrap .cell {
+  margin-bottom: 3.5rem;
+}
+.services .services-wrap .cell .icon-wrap {
+  padding-bottom: 1.82rem;
 }
 
 .page-template-page-home .home-banner {

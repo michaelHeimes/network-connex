@@ -1,16 +1,22 @@
 <?php
 	$slides = get_sub_field('slides');
 	if( !empty($slides) ):
+	$i = 0; foreach ($slides as $slide):		
+		if($i == 0) {
+			$color_theme = $slide['color_theme'];
+		}		
+	$i++; endforeach;
 ?>
-<header class="banner banner-slider">
+<header class="banner banner-slider" color-theme="color-theme-<?php echo $color_theme;?>">
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			<?php foreach ($slides as $slide):
 				$background_image = $slide['background_image'];
 				$heading = $slide['heading'];
 				$text = $slide['text'];
+				$color_theme = $slide['color_theme'];
 			?>
-			<div class="swiper-slide has-bg">
+			<div class="swiper-slide has-bg" data-theme="color-theme-<?php echo $color_theme;?>">
 				<div class="bg" style="background-image: url('<?php echo $background_image['url'];?>');"></div>
 				<div class="grid-container relative">
 					<div class="inner grid-x grid-margin-x align-middle">

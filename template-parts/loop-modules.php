@@ -20,12 +20,18 @@
 					get_template_part('template-parts/modules/centered-copy');
 				elseif( get_row_layout() == 'ctas_with_background_images' ):
 					get_template_part('template-parts/modules/ctas-with-background-images');
+				elseif( get_row_layout() == 'facts_figures' ):
+					get_template_part('template-parts/modules/facts-figures');
 				elseif( get_row_layout() == 'featured_projects' ):
 					get_template_part('template-parts/modules/featured-projects');
 				elseif( get_row_layout() == 'image_left_copy_right' ):
 					get_template_part('template-parts/modules/image-left-copy-right');
 				elseif( get_row_layout() == 'news_events' ):
 					get_template_part('template-parts/modules/news-events');
+				elseif( get_row_layout() == 'services' ):
+					get_template_part('template-parts/modules/services');
+				elseif( get_row_layout() == 'team' ):
+					get_template_part('template-parts/modules/team');
 				endif;
 	
 			endwhile;

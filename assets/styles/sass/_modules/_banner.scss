@@ -20,10 +20,11 @@
 		&:after {
 			content: '';
 			display: block;
-			width: calc(50% - 50px);
+			width: calc(50% - 40px);
 			position: absolute;
 			height: 28px;
 			background-color: $brand-green;
+			transition: all .3s ease
 		}
 		&:before {
 			left: 0;
@@ -38,9 +39,48 @@
 			transform: translateY(-31px);
 			svg {
 				max-height: 131px;
+				path {
+					transition: all .3s ease
+				}
 			}
 		}
 	}
+	
+&[color-theme="color-theme-green"] {
+		.banner-border {
+			&:before,
+			&:after {
+				background-color: $brand-green;
+			}
+			svg path {
+				fill: $brand-green;
+			}
+		}
+	}
+	
+&[color-theme="color-theme-purple"] {
+	.banner-border {
+		&:before,
+		&:after {
+			background-color: $brand-purple;
+		}
+		svg path {
+			fill: $brand-purple;
+		}
+	}
+}
+	
+&[color-theme="color-theme-sky-blue"] {
+	.banner-border {
+		&:before,
+		&:after {
+			background-color: $brand-sky-blue;
+		}
+		svg path {
+			fill: $brand-sky-blue;
+		}
+	}
+}
 	
 &.default-banner {
 	.bg.mask {
@@ -53,16 +93,7 @@
 			padding-bottom: 4rem;
 		}
 	}
-	
-&.color-green {
-	.banner-border {
-		&:before,
-		&:after {
-			background-color: $brand-green;
-		}
-	}
-}
-	
+		
 }
 	
 &.banner-slider {

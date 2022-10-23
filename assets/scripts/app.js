@@ -139,16 +139,123 @@
                 autoplay: {
                     delay: 7000,
                 },
+                on: {
+                    realIndexChange: function () {
+                        let index = this.realIndex + 1; /* slide 1 => slides[1] */
+                        let color_theme = this.slides[index].dataset.theme;
+                        $('.banner-slider').attr('color-theme', color_theme);
+                    },
+                }
             });
             
             $(".blog-slider .swiper-container").each(function(index, element){
                 const swiper = this.swiper;
                 swiper.update();
             });
-        
+
         }
         
     } 
+    
+    _app.team_bios = function() {
+    
+        if( $('.team').length ) {
+            
+            // var tmContainer = 0;
+            // var tmLeftOffset = 0;
+            // var tmLeftPostion = 0;
+            
+            const setOffset = function() {
+
+                let tmContainer = $('.team-wrap');
+                let tmContainerWidth = $(tmContainer).width() - 16;
+                let tmContainerOffset = $(tmContainer).offset().left;
+                
+                $('.tm-bio').width(tmContainer);
+    
+                $('.single-tm').each( function(){
+                    let tm = $(this);
+                    let tmWidth = $(tm).outerWidth();
+                    let tmLeftOffset = $(tm).offset().left;
+                    let tmRightOffset = $(window).width() - tmLeftOffset - tmLeftOffset - tmWidth;
+                    
+                    let bio = $(tm).find('.tm-bio');
+                    $(bio).css('left', -tmLeftOffset + tmContainerOffset);
+                    $(bio).width(tmContainerWidth + 32);
+                });
+                
+            }
+                        
+            $(window).on("load resize", function() {
+                setOffset();
+            });
+            
+            const setBioContainerHeight = function() {
+                let openBio = $('.bio-open');
+                let tmBioHeight = $('.bio-open .tm-bio').outerHeight();
+                $(openBio).css('margin-bottom', tmBioHeight);
+                
+                let animationDuration = 500;
+                let animationEasing = 'swing';
+                let headerheight = $('header.site-header').outerHeight();
+                let imgHeight = $(openBio).find('.img-wrap').height();
+                let scrollPos = $(openBio).offset().top - headerheight + (imgHeight * .5);
+                    
+                $('html, body').stop(true).animate({
+                    scrollTop: scrollPos
+                  }, animationDuration, animationEasing);
+                
+            }
+                
+            $('.single-tm a').click(function(e){
+                e.preventDefault();
+
+                let tm = $(this).parent().parent();
+                let tmBio = $(tm).find('.tm-bio');
+
+                
+                
+                if( $(tm).hasClass('bio-open') ){
+                    $(tm).removeClass('bio-open-only'); 
+                    $(tm).removeClass('bio-open').css('margin-bottom', 16);;
+
+                } else {
+                    $(tm).addClass('bio-open');
+                    
+                    if( $(tm).siblings().hasClass('bio-open') ) {
+                        $(tm).siblings().removeClass('bio-open');  
+                        
+                        $(tm).removeClass('bio-open-only');  
+                        $(tm).siblings().removeClass('bio-open-only');  
+                        //setTimeout(function() {
+                            setBioContainerHeight();
+                        //}, 250);
+                        $(tm).siblings().css('margin-bottom', 16);  
+                    } else {
+                        $(tm).addClass('bio-open-only');
+                        setBioContainerHeight();
+                    }
+                    
+
+
+                    //$(tm).removeClass('bio-open').css('margin-bottom', 16);
+
+                }
+                
+            });
+            
+            $(window).on("resize", function() {
+                setBioContainerHeight();
+            });
+                
+            $('.single-tm').each( function(){
+
+                
+            });
+        
+        }
+        
+    }
             
     _app.init = function() {
         
@@ -160,6 +267,7 @@
         
         // Custom Functions
         _app.banner_slider();
+        _app.team_bios();
     }
     
     

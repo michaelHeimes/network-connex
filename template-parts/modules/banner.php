@@ -3,7 +3,7 @@
 	$background_image = get_sub_field('background_image');
 	$color_theme = get_sub_field('color_theme');
 ?>
-<header class="banner default-banner has-bg color-<?php echo $color_theme;?>">
+<header class="banner default-banner has-bg" color-theme="color-theme-<?php echo $color_theme;?>">
 	<div class="bg" style="background-image: url('<?php echo $background_image['url'];?>');"></div>
 	<div class="bg mask"></div>
 	<div class="grid-container relative">

@@ -1,0 +1,116 @@
+.team {
+	.team-wrap {
+		h2 {
+			margin-bottom: 1.48em;
+		}
+	}
+	.single-tm {
+		transition: margin-bottom .25s ease .25s;
+		.inner {
+			a {
+				display: block;
+				position: relative;
+				
+			&:before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: #3C8CB8;
+				transform: translate(-5px, -5px);
+				transition: transform .3s ease;
+			}
+			
+			&:hover:before {
+				transform: translate(5px, 5px);
+			}
+				
+			}
+			.img-wrap {
+				.bg{
+					height: 78px;
+					top: auto;
+					background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 86.98%);	
+				}
+				.title {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					padding: 0.85rem 0.45rem;
+					.toggle {
+						position: relative;
+						width: 40px;
+						height: 40px;
+						background-color: $brand-green;
+						border-radius: 3px;
+						margin-right: 1rem;
+						span {
+							display: block;
+							background-color: $white;
+							width: 24px;
+							height: 2.75px;
+							border-radius: 1px;
+							position: absolute;
+							top: 0;
+							left: 0;
+							transform: translate(8.325px, 18.325px);
+							transition: transform .25s ease;
+							&:nth-child(2) {
+								transform: translate(8.325px, 18.325px) rotate(90deg);
+							}
+						}
+					}
+					h3,
+					h4 {
+						text-transform: none;
+						color: $white;
+						font-weight: 400;
+					}
+					h3 {
+						font-size: rem-calc(18);
+						line-height: 1.2;
+						margin-bottom: 0.3rem;
+					}
+					h4 {
+						font-size: rem-calc(14);
+						line-height: 1.2;
+					}
+				}
+			}
+		}
+		.tm-bio {
+			padding: 3.78rem 0 3.2rem;
+			opacity: 0;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			transition: opacity .25s ease;	
+		}
+		
+	&.bio-open {
+		transition: margin-bottom .25s ease 0s;
+		
+		.inner .img-wrap .title .toggle span:nth-child(2) {
+			transform: translate(8.325px, 18.325px) rotate(0deg);
+		}
+		
+		.tm-bio {
+			opacity: 1;
+			transition: opacity .25s ease .5s;
+		}
+	}
+	
+	&.bio-open-only {
+		transition: margin-bottom .25s ease .25s;
+		.tm-bio {
+			opacity: 1;
+			transition: opacity .25s ease .25s;
+		}
+	}
+	
+	}	
+}
