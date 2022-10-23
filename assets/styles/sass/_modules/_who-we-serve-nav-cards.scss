@@ -1,0 +1,27 @@
+.who-we-serve-nav-cards {
+	padding-top: 4.6875rem;
+	a {
+		display: block;
+		margin-bottom: 1.85rem;
+		.img-wrap {
+			margin-bottom: 1.15rem;
+		}
+		.bg.mask {
+			background: linear-gradient(115.07deg, rgba(60, 140, 184, 0.25) 0%, rgba(60, 140, 184, 0.19) 100%);
+			mix-blend-mode: multiply;
+		}
+		.bg.button-wrap {
+			opacity: 0;
+			background: linear-gradient(115.07deg, #3C8CB8 0%, rgba(60, 140, 184, 0.76) 100%);
+			mix-blend-mode: normal;
+			transition: opacity .3s ease;
+		}
+		
+	&:hover {
+		.bg.button-wrap {
+			opacity: 1;
+		}
+	}
+		
+	}
+}

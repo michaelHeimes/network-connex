@@ -24,6 +24,13 @@ button {
 	line-height: 1.1;
 	letter-spacing: 0.05em;
 	min-width: 221px;
+	
+&.white-outline {
+	background-color: transparent;
+	border: 1px solid $white;
+	color: $white;
+}
+	
 }
 
 .grid-x.grid-20 {

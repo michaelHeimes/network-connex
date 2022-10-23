@@ -1,0 +1,36 @@
+.image-copy-light-blue-background {
+		
+	.right {
+		.grid-x {
+			padding: 3.2rem;
+			ul,
+			ol{
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	@include breakpoint(tablet) {
+		.left {
+			padding-right: 0;
+			height: auto;
+			.img-wrap {
+				position: relative;
+				overflow: hidden;
+				height: auto;
+				width: 100%;
+				img {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					object-fit: cover;
+				}
+			}
+		}
+		.right {
+			min-height: 460px;
+			padding-left: 0;
+		}
+	}
+	
+}

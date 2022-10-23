@@ -9,7 +9,7 @@
 				<h2 class="text-center"><?php echo $heading;?></h2>
 			</div>
 		</div>
-		<div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3">
+		<div class="services-wrap grid-x grid-padding-x small-up-1 medium-up-2 large-up-3">
 			<div class="bg"></div>
 			<?php foreach( $services as $service ):
 				$icon = $service['icon'];

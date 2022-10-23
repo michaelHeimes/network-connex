@@ -1,13 +1,42 @@
 <?php 
 	$background_color = get_sub_field('background_color');
 	$copy = get_sub_field('copy');
+	$icons_labels = get_sub_field('icons_label');
 	$button_link = get_sub_field('button_link');
 ?>
 <section class="module centered-copy <?php echo $background_color;?>-bg">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
-			<div class="cell small-12 large-10 large-offset-1 text-center">
+			<div class="copy-wrap cell small-12 large-10 large-offset-1 text-center">
 				<?php echo $copy;?>
+			</div>
+			
+			<?php if($icons_labels):?>
+			<div class="cell small-12">
+				<div class="icons-labels grid-x grid-padding-x small-up-2 mdium-up-3 large-up-5 xlarge-up-7 align-center">
+				<?php
+					$i = 1;
+					foreach( $icons_labels as $icons_label ):
+					$icon = $icons_label['icon'];
+					$label = $icons_label['label'];
+				?>
+					<div class="cell shrink text-center">
+						<?php 
+						$image = $icon;
+						if( !empty( $image ) ): ?>
+						<div class="img-wrap">
+							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+						</div>
+						<?php endif; ?>
+						<?php if($label):?>
+						<h4><?php echo $label;?></h4>
+						<?php endif;?>
+					</div>
+				<?php $i++; endforeach;?>
+				</div>
+			</div>
+			<?php endif;?>
+			<div class="cell small-up-2 mdium-up-3 large-up-5 xlarge-up-7 text-center">
 				<?php 
 				$link = $button_link;
 				if( $link ): 
