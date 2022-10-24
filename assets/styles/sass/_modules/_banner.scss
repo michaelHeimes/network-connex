@@ -1,6 +1,10 @@
 .banner {
 	overflow: hidden;
 	
+	h1 {
+		text-transform: none;
+	}
+	
 	p {
 		font-weight: 500;
 		font-size: rem-calc(19.6);
@@ -8,6 +12,10 @@
 		@include breakpoint(medium) {
 			font-size: rem-calc(28);
 		}
+	}
+	
+	.btn-wrap {
+		padding-top: 1.5rem;
 	}
 	
 	.banner-border {
@@ -59,6 +67,12 @@
 	}
 	
 &[color-theme="color-theme-purple"] {
+	a.button {
+		background-color: $brand-purple;	
+		&:hover {
+			background-color: scale-color($brand-purple, $lightness: -15%)
+		}
+	}
 	.banner-border {
 		&:before,
 		&:after {
@@ -71,6 +85,12 @@
 }
 	
 &[color-theme="color-theme-sky-blue"] {
+	a.button {
+		background-color: $brand-sky-blue;	
+		&:hover {
+			background-color: scale-color($brand-sky-blue, $lightness: -15%)
+		}
+	}
 	.banner-border {
 		&:before,
 		&:after {
@@ -100,6 +120,9 @@
 	.swiper-slide {
 		height: auto;
 		width: 100%;
+		.bg.mask {
+			background-color: rgba($white, .5);
+		}
 	}
 	.inner {
 		height: 100%;

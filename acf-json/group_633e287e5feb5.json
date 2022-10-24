@@ -76,11 +76,11 @@
                         },
                         {
                             "key": "field_633e31a02717b",
-                            "label": "Alternative Title",
-                            "name": "alternative_title",
+                            "label": "Heading",
+                            "name": "heading",
                             "aria-label": "",
                             "type": "text",
-                            "instructions": "Use this if the banner title is different than the page title.",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -234,6 +234,23 @@
                                     "rows": 2,
                                     "placeholder": "",
                                     "new_lines": "",
+                                    "parent_repeater": "field_633e31b12717f"
+                                },
+                                {
+                                    "key": "field_6355e477d0364",
+                                    "label": "Button Link",
+                                    "name": "button_link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
                                     "parent_repeater": "field_633e31b12717f"
                                 }
                             ]
@@ -1508,5 +1525,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666547515
+    "modified": 1666574614
 }

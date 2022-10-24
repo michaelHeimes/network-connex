@@ -9780,6 +9780,10 @@ footer#colophon .copyright p {
   background-color: #3C8CB8;
 }
 
+.color-blue {
+  color: #1C365F;
+}
+
 .color-white {
   color: #fff;
 }
@@ -9807,6 +9811,9 @@ footer#colophon .copyright p {
 .banner {
   overflow: hidden;
 }
+.banner h1 {
+  text-transform: none;
+}
 .banner p {
   font-weight: 500;
   font-size: 1.225rem;
@@ -9816,6 +9823,9 @@ footer#colophon .copyright p {
   .banner p {
     font-size: 1.75rem;
   }
+}
+.banner .btn-wrap {
+  padding-top: 1.5rem;
 }
 .banner .banner-border {
   height: 28px;
@@ -9859,11 +9869,23 @@ footer#colophon .copyright p {
 .banner[color-theme=color-theme-green] .banner-border svg path {
   fill: #6BBE4A;
 }
+.banner[color-theme=color-theme-purple] a.button {
+  background-color: #4A4B99;
+}
+.banner[color-theme=color-theme-purple] a.button:hover {
+  background-color: #3f4082;
+}
 .banner[color-theme=color-theme-purple] .banner-border:before, .banner[color-theme=color-theme-purple] .banner-border:after {
   background-color: #4A4B99;
 }
 .banner[color-theme=color-theme-purple] .banner-border svg path {
   fill: #4A4B99;
+}
+.banner[color-theme=color-theme-sky-blue] a.button {
+  background-color: #3C8CB8;
+}
+.banner[color-theme=color-theme-sky-blue] a.button:hover {
+  background-color: #33779c;
 }
 .banner[color-theme=color-theme-sky-blue] .banner-border:before, .banner[color-theme=color-theme-sky-blue] .banner-border:after {
   background-color: #3C8CB8;
@@ -9884,6 +9906,9 @@ footer#colophon .copyright p {
 .banner.banner-slider .swiper-slide {
   height: auto;
   width: 100%;
+}
+.banner.banner-slider .swiper-slide .bg.mask {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .banner.banner-slider .inner {
   height: 100%;
