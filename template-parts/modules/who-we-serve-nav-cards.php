@@ -9,6 +9,18 @@
 				$page = $nav_card['page'];
 				$permalink = get_permalink( $page->ID );
 				$title = get_the_title( $page->ID );
+				
+				$searchMNOs = "MNOs";
+				$searchMSOs = "MSOs";
+				
+				if(preg_match("/{$searchMNOs}/i", $title)) {
+					$title = preg_replace('/(.)$/', '<span style="text-transform: lowercase;">\1</span>', $title);
+				}
+
+				if(preg_match("/{$searchMSOs}/i", $title)) {
+					$title = preg_replace('/(.)$/', '<span style="text-transform: lowercase;">\1</span>', $title);
+				}
+				
 			?>
 			<div class="cell text-center">
 				<a href="<?php echo esc_url( $permalink ); ?>" class="inner">
@@ -22,7 +34,7 @@
 						</div>
 					</div>
 					<?php endif; ?>
-					<h4><?php echo esc_html( $title ); ?></h4>
+					<h4><?php echo $title ; ?></h4>
 				</a>
 			</div>
 			<?php endforeach; wp_reset_postdata();?>

@@ -34,6 +34,8 @@
 					get_template_part('template-parts/modules/news-events');
 				elseif( get_row_layout() == 'quote' ):
 					get_template_part('template-parts/modules/quote');
+				elseif( get_row_layout() == 'resources' ):
+					get_template_part('template-parts/modules/resources');
 				elseif( get_row_layout() == 'services' ):
 					get_template_part('template-parts/modules/services');
 				elseif( get_row_layout() == 'team' ):

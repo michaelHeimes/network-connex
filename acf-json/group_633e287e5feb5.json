@@ -1193,6 +1193,15 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_635abf5e3ed80": {
+                    "key": "layout_635abf5e3ed80",
+                    "name": "resources",
+                    "label": "Resources",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_6354954acbced": {
                     "key": "layout_6354954acbced",
                     "name": "services",
@@ -1511,10 +1520,15 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "resource"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "resource_type:brochures"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -1525,5 +1539,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666574614
+    "modified": 1666916472
 }

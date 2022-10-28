@@ -26,11 +26,9 @@
 	<?php wp_body_open(); ?>
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'network-connex' ); ?></a>
 		
-			<div class="sticky-container">
 				<header class="site-header white-bg" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
 					<?php get_template_part( 'template-parts/nav', 'offcanvas-topbar' ); ?>
 				</header><!-- #masthead -->
-			</div>
 				
 				<div class="off-canvas-wrapper">
 				

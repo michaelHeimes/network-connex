@@ -17,11 +17,13 @@ function network_connex_top_nav() {
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'main-nav',					// Adding custom nav id
 		'menu_class'		=> 'medium-horizontal menu',	// Adding custom nav class
-		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown" data-hover-delay="20" data-closing-time="20" data-alignment="auto">%3$s</ul>',
+		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown" data-alignment="center" data-hover-delay="20" data-closing-time="20" data-alignment="auto">%3$s</ul>',
 		'theme_location'	=> 'main-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
-		'fallback_cb'		=> false,						// Fallback function (see below)
-		'walker'			=> new Topbar_Menu_Walker(),
+		'fallback_cb'		=> false,
+		'link_before'	=> '<span>',		// Before each link
+		'link_after'	=> '</span>',		// After each link						
+		'walker'			=> new Topbar_Menu_Walker(), // Fallback function (see below)
 	));
 }
 

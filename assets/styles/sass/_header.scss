@@ -1,4 +1,5 @@
 header.site-header {
+	z-index: 5;
 	transition: transform .5s ease;
 	
 	.top-bar .top-bar-left, .top-bar .top-bar-right {
@@ -6,11 +7,20 @@ header.site-header {
 		margin-right: auto;
 	}
 	
+	.logo {
+		padding-left: 0.57rem;
+	}
+	
 	a {
 		font-family: $font-brandon;
-		font-weight: 600;
 		color: $brand-blue;
 	}
+	
+	// .top-bar,
+	// .utility-nav {
+	// 	max-width: 1400px;
+	// 	margin: auto;
+	// }
 	
 	.utility-nav {
 		position: relative;
@@ -19,8 +29,8 @@ header.site-header {
 			position: absolute;
 			bottom: 0;
 			border: 0.25px solid $dark-gray;
-			left: -0.9375rem;
-			right: -0.9375rem;
+			left: -1rem;
+			right: -1rem;
 		}
 		li {
 			width: auto;
@@ -30,11 +40,23 @@ header.site-header {
 				line-height: 1.1;
 				letter-spacing: 0.05em;
 				text-transform: uppercase;
+				&:hover {
+					background-color: $brand-green;
+					color: $white;
+				}
+				svg path {
+					
+				}
 			}
 		}
 		#social-links {
 			a {
 				padding: 8px;
+				&:hover {
+					svg path {
+						fill: $white;
+					}
+				}
 			}
 		}
 	}
@@ -55,6 +77,28 @@ header.site-header {
 			
 		#main-nav {
 			align-items: center;
+			li {
+				a {					
+					span {
+						padding: 0.28rem 0;
+						display: inline-block;
+						border-bottom: 0px solid $brand-green;
+					}
+					
+					&:hover {
+						background-color: $brand-green;
+						color: $white;
+					}
+				}
+				&.current-menu-item,
+				&.current-page-parent {
+					> a {
+						span {
+							border-width: 0 0 2px 0 !important;
+						}
+					}
+				}
+			}
 			>li {
 				margin: 0 .3rem 0rem;
 				
@@ -66,46 +110,27 @@ header.site-header {
 					position: relative;
 					
 					@include breakpoint(tablet) {
+						text-transform: uppercase;
 						font-size: rem-calc(14);
 						letter-spacing: 1.4px;
 					}
-					
-					span {
-						&:before {
-							content: '';
-							width: calc(100% - 1rem);
-							position: absolute;
-							top: 0;
-							height: 11px;
-							background-color: transparent;
-						}
-					}
-					
-				&:hover {
-
 				}
-					
-				}
-				
-			&.is-active,
-			&.current-menu-ancestor {
-				span:before {
-					background-color: $white;
-				}
-			}
 				
 			&.menu-item-has-children {
 				
 				ul.submenu {
+					padding-top: .5rem;
+					left: 50%;
+					transform: translateX(-50%);
 					li {
 						a {
-
-							
-						&:hover {
-
+							text-align: center;
+							font-size: rem-calc(14);
+							letter-spacing: .05em;
+							line-height: 1.1;
 						}
-							
-						}
+						
+
 						
 					}
 				}

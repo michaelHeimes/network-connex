@@ -1,6 +1,5 @@
 .banner {
 	overflow: hidden;
-	
 	h1 {
 		text-transform: none;
 	}
@@ -32,7 +31,7 @@
 			position: absolute;
 			height: 28px;
 			background-color: $brand-green;
-			transition: all .3s ease
+			transition: all .3s ease;
 		}
 		&:before {
 			left: 0;
@@ -55,16 +54,19 @@
 	}
 	
 &[color-theme="color-theme-green"] {
-		.banner-border {
-			&:before,
-			&:after {
-				background-color: $brand-green;
-			}
-			svg path {
-				fill: $brand-green;
-			}
+	.banner-border {
+		&:before,
+		&:after {
+			background-color: $brand-green;
+		}
+		svg path {
+			fill: $brand-green;
 		}
 	}
+	.swiper-pagination.banner-swiper-pagination .swiper-pagination-bullet-active {
+		background-color: $brand-green;	
+	}
+}
 	
 &[color-theme="color-theme-purple"] {
 	a.button {
@@ -81,6 +83,9 @@
 		svg path {
 			fill: $brand-purple;
 		}
+	}
+	.swiper-pagination.banner-swiper-pagination .swiper-pagination-bullet-active {
+		background-color: $brand-purple;	
 	}
 }
 	
@@ -100,6 +105,10 @@
 			fill: $brand-sky-blue;
 		}
 	}
+	.swiper-pagination.banner-swiper-pagination 
+		.swiper-pagination-bullet-active {
+		background-color: $brand-sky-blue;	
+	}
 }
 	
 &.default-banner {
@@ -117,12 +126,28 @@
 }
 	
 &.banner-slider {
+	position: relative;
+	overflow: visible;
+	.inner-banner {
+		overflow: hidden;
+	}
+	.swiper-container {
+		position: relative;
+	}
 	.swiper-slide {
 		height: auto;
 		width: 100%;
-		.bg.mask {
-			background-color: rgba($white, .5);
+		&:not(.first) {
+			.bg.mask {
+				background-color: rgba($white, .5);
+			}
 		}
+	&.first {
+		h1,
+		p {
+			color: $white;
+		}
+	}
 	}
 	.inner {
 		height: 100%;
@@ -134,4 +159,15 @@
 	}
 }
 
+}
+
+.swiper-pagination.banner-swiper-pagination {
+	bottom: -32px;
+	.swiper-pagination-bullet {
+		opacity: 1;
+		width: 12px;
+		height: 12px;
+		background-color: $dark-gray; 
+		transition: all .3s ease;
+	}
 }

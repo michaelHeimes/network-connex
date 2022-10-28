@@ -1,15 +1,15 @@
 {
-    "key": "group_633ed735287c2",
-    "title": "Resources: Case Studies & News",
+    "key": "group_635b1f2394d9e",
+    "title": "Resources: Brochures",
     "fields": [
         {
-            "key": "field_633ed7354a16c",
+            "key": "field_635b1f2399086",
             "label": "Grid Image",
             "name": "grid_image",
             "aria-label": "",
             "type": "image",
             "instructions": "Minimum of 379px X 275px. 758px X 55px is preferred.",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -28,24 +28,24 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_633ed75b4a16d",
-            "label": "Grid Excerpt",
-            "name": "grid_excerpt",
+            "key": "field_635b20444f09d",
+            "label": "Brochure",
+            "name": "brochure",
             "aria-label": "",
-            "type": "text",
+            "type": "file",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -58,19 +58,7 @@
             {
                 "param": "post_taxonomy",
                 "operator": "==",
-                "value": "resource_type:case-studies"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "resource"
-            },
-            {
-                "param": "post_taxonomy",
-                "operator": "==",
-                "value": "resource_type:news-events"
+                "value": "resource_type:brochures"
             }
         ]
     ],
@@ -85,5 +73,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666916302
+    "modified": 1666916815
 }

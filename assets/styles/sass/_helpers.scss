@@ -15,6 +15,27 @@
 	}
 }
 
+.font-brandon {
+	font-family: $font-brandon;
+}
+
+.link-14 {
+	font-family: $font-brandon;
+	display: inline-block;
+	padding: 0.15rem 0;
+	font-size: rem-calc(14);
+	font-weight: 800;
+	line-height: 1.5;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	position: relative;
+	border-bottom: 2px solid $brand-green;
+&.color-white {
+	border-color: $white;
+}
+}
+
 .relative {
 	position: relative;
 }
