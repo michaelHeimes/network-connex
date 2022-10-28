@@ -1,0 +1,15 @@
+.logos-and-text-rows {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	.grid-x {
+		padding-top: 1.5rem;
+		hr {
+			margin-top: 3rem;
+		}
+	}
+	@include breakpoint(small down) {
+		.left {
+			padding-bottom: 1.5rem;
+		}
+	}
+}

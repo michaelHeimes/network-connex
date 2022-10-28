@@ -10300,6 +10300,41 @@ footer#colophon .copyright p {
   opacity: 1;
 }
 
+.text-editor {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+.text-editor h1:not(:first-child),
+.text-editor .h1:not(:first-child),
+.text-editor h2:not(:first-child),
+.text-editor .h2:not(:first-child),
+.text-editor h3:not(:first-child),
+.text-editor .h3:not(:first-child),
+.text-editor h4:not(:first-child),
+.text-editor .h4:not(:first-child),
+.text-editor h5:not(:first-child),
+.text-editor .h5:not(:first-child),
+.text-editor h6:not(:first-child),
+.text-editor .h6:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.logos-and-text-rows {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.logos-and-text-rows .grid-x {
+  padding-top: 1.5rem;
+}
+.logos-and-text-rows .grid-x hr {
+  margin-top: 3rem;
+}
+@media print, screen and (max-width: 39.99875em) {
+  .logos-and-text-rows .left {
+    padding-bottom: 1.5rem;
+  }
+}
+
 .page-template-page-home .home-banner {
   background-color: #1C1A1A;
   position: relative;
