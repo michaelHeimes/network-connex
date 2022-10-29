@@ -55,12 +55,11 @@ add_filter('admin_footer_text', 'network_connex_custom_admin_footer');
 		// Define the style_formats array
 		$style_formats = array(  
 			// Each array child is a format with it's own settings
-	        array(  
-	            'title' => 'Large Blue Text',  
-	            'block' => 'span',  
-	            'classes' => 'large-blue-text',
-	            'wrapper' => true,
-	        ),
+			array(  
+				'title' => 'Button',  
+				'selector' => 'a',  
+				'classes' => 'button'
+			),
 		);
 		// Insert the array, JSON ENCODED, into 'style_formats'
 		$init_array['style_formats'] = json_encode( $style_formats );  

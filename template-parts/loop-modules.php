@@ -44,6 +44,8 @@
 					get_template_part('template-parts/modules/team');
 				elseif( get_row_layout() == 'text_editor' ):
 					get_template_part('template-parts/modules/text-editor');
+				elseif( get_row_layout() == 'two-image_set' ):
+					get_template_part('template-parts/modules/two-image-set');
 				elseif( get_row_layout() == 'who_we_serve_nav_cards' ):
 					get_template_part('template-parts/modules/who-we-serve-nav-cards');
 				endif;

@@ -9371,14 +9371,16 @@ header.site-header #top-bar-menu #main-nav {
 header.site-header #top-bar-menu #main-nav li a span {
   padding: 0.28rem 0;
   display: inline-block;
-  border-bottom: 0px solid #6BBE4A;
+  border-bottom: 2px solid transparent;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 header.site-header #top-bar-menu #main-nav li a:hover {
   background-color: #6BBE4A;
   color: #fff;
 }
 header.site-header #top-bar-menu #main-nav li.current-menu-item > a span, header.site-header #top-bar-menu #main-nav li.current-page-parent > a span {
-  border-width: 0 0 2px 0 !important;
+  border-color: #6BBE4A;
 }
 header.site-header #top-bar-menu #main-nav > li {
   margin: 0 0.3rem 0rem;
@@ -9618,6 +9620,61 @@ footer#colophon .copyright p {
   background-color: #fff;
 }
 
+.single .entry-header {
+  padding-top: 4.35rem;
+  padding-bottom: 1.85rem;
+  margin-bottom: 2.625rem;
+}
+.single .entry-header .byline-wrap {
+  padding-bottom: 0.24rem;
+}
+.single .entry-header h1.h2 {
+  line-height: 1.3;
+}
+.single .text-editor {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.single blockquote,
+.single blockquote p {
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 1.6;
+  text-align: center;
+  position: relative;
+  color: #1C1A1A;
+}
+.single blockquote {
+  border: 0;
+  position: relative;
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+  padding-top: 2.1rem;
+  padding-bottom: 1rem;
+}
+.single blockquote:before, .single blockquote:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 70%;
+  max-width: 322px;
+  margin: auto;
+  height: 1px;
+  background-color: #000;
+}
+.single blockquote:before {
+  top: 0;
+}
+.single blockquote:after {
+  bottom: 0;
+}
+.single .news-events {
+  background-color: #F2F2F4;
+  padding-top: 4.05rem;
+}
+
 .banner {
   overflow: hidden;
 }
@@ -9773,7 +9830,6 @@ footer#colophon .copyright p {
 }
 .centered-copy .icons-labels .cell {
   margin-bottom: 2rem;
-  max-width: 182px;
 }
 .centered-copy .icons-labels .cell .img-wrap {
   margin-bottom: 0.5rem;
@@ -10301,8 +10357,8 @@ footer#colophon .copyright p {
 }
 
 .text-editor {
-  padding-top: 6rem;
-  padding-bottom: 5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3rem;
 }
 .text-editor h1:not(:first-child),
 .text-editor .h1:not(:first-child),
@@ -10323,16 +10379,20 @@ footer#colophon .copyright p {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.logos-and-text-rows .grid-x {
+.logos-and-text-rows .grid-x:not(:first-child) {
   padding-top: 1.5rem;
 }
-.logos-and-text-rows .grid-x hr {
+.logos-and-text-rows .grid-x:not(:first-child) hr {
   margin-top: 3rem;
 }
 @media print, screen and (max-width: 39.99875em) {
   .logos-and-text-rows .left {
     padding-bottom: 1.5rem;
   }
+}
+
+.two-image-set {
+  margin-bottom: 1rem;
 }
 
 .page-template-page-home .home-banner {

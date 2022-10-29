@@ -1,7 +1,7 @@
 .logos-and-text-rows {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	.grid-x {
+	.grid-x:not(:first-child) {
 		padding-top: 1.5rem;
 		hr {
 			margin-top: 3rem;

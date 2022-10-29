@@ -1002,6 +1002,26 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_635c22fe07085",
+                            "label": "Intro Copy",
+                            "name": "intro_copy",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
                             "key": "field_635bd76b9e481",
                             "label": "Rows",
                             "name": "rows",
@@ -1082,11 +1102,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_633ecc6f9be1f",
-                            "label": "",
-                            "name": "",
+                            "key": "field_635c7e1677fef",
+                            "label": "News Posts",
+                            "name": "news_posts",
                             "aria-label": "",
-                            "type": "message",
+                            "type": "relationship",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1095,9 +1115,21 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "This module shows the three most recent News & Events posts.",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
+                            "post_type": [
+                                "resource"
+                            ],
+                            "taxonomy": [
+                                "resource_type:news-events"
+                            ],
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "object",
+                            "min": "",
+                            "max": "",
+                            "elements": ""
                         }
                     ],
                     "min": "",
@@ -1491,6 +1523,66 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_635c73963a667": {
+                    "key": "layout_635c73963a667",
+                    "name": "two-image_set",
+                    "label": "Two-image Set",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_635c73a03a668",
+                            "label": "Left Image",
+                            "name": "left_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_635c73a93a669",
+                            "label": "Right Image",
+                            "name": "right_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_635555685b6b0": {
                     "key": "layout_635555685b6b0",
                     "name": "who_we_serve_nav_cards",
@@ -1619,5 +1711,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666964015
+    "modified": 1667006003
 }

@@ -12,15 +12,15 @@
 			</div>
 			
 			<?php if($icons_labels):?>
-			<div class="cell small-12">
-				<div class="icons-labels grid-x grid-padding-x small-up-2 mdium-up-3 large-up-5 xlarge-up-7 align-center">
+			<div class="cell small-12 large-10 large-offset-1">
+				<div class="icons-labels grid-x grid-padding-x small-up-2 medium-up-3 large-up-5 align-center">
 				<?php
 					$i = 1;
 					foreach( $icons_labels as $icons_label ):
 					$icon = $icons_label['icon'];
 					$label = $icons_label['label'];
 				?>
-					<div class="cell shrink text-center">
+					<div class="cell text-center">
 						<?php 
 						$image = $icon;
 						if( !empty( $image ) ): ?>

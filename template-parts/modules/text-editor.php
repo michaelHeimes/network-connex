@@ -4,7 +4,7 @@
 <section class="module text-editor <?php echo $background_color;?>-bg">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
-			<div class="cell small-12">
+			<div class="cell small-12 large-10 large-offset-1">
 				<?php echo $text_editor;?>
 			</div>
 		</div>

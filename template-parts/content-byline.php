@@ -6,10 +6,6 @@
 
 <p class="byline">
 	<?php
-	printf( __( 'Posted on %1$s by %2$s - %3$s', 'network-connex' ),
-		get_the_time( __('F j, Y', 'network-connex') ),
-		get_the_author_posts_link(),
-		get_the_category_list(', ')
-	);
+		$post_date = get_the_date( 'M d, Y' ); echo $post_date;
 	?>
 </p>	

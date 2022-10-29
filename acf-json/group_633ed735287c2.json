@@ -8,7 +8,7 @@
             "name": "grid_image",
             "aria-label": "",
             "type": "image",
-            "instructions": "Minimum of 379px X 275px. 758px X 55px is preferred.",
+            "instructions": "Minimum of 379px X 275px. 758px X 550px is preferred.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -85,5 +85,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666916302
+    "modified": 1667046694
 }
