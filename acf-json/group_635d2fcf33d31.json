@@ -301,24 +301,6 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
-        },
-        {
-            "key": "field_635dc1a4dc0a7",
-            "label": "Our Locations Slider",
-            "name": "",
-            "aria-label": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Locations are managed Globally in the admin under Locations.",
-            "new_lines": "wpautop",
-            "esc_html": 0
         }
     ],
     "location": [
@@ -341,5 +323,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667093798
+    "modified": 1667155715
 }

@@ -30,6 +30,8 @@
 					get_template_part('template-parts/modules/image-left-copy-right');
 				elseif( get_row_layout() == 'image_copy_light-blue_background' ):
 					get_template_part('template-parts/modules/image-copy-light-blue-background');
+				elseif( get_row_layout() == 'locations_slider' ):
+					get_template_part('template-parts/modules/locations-slider');
 				elseif( get_row_layout() == 'logos_and_text_rows' ):
 					get_template_part('template-parts/modules/logos-and-text-rows');
 				elseif( get_row_layout() == 'news_events' ):

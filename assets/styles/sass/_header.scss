@@ -2,6 +2,13 @@ header.site-header {
 	z-index: 5;
 	transition: transform .5s ease;
 	
+	.top-bar {
+		@include breakpoint(medium down) {
+			padding-top: .4rem;
+			padding-bottom: .4rem;
+		}
+	}
+	
 	.top-bar .top-bar-left, .top-bar .top-bar-right {
 		flex: 1 1 auto;
 		margin-right: auto;

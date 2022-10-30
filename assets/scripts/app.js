@@ -163,9 +163,9 @@
 
     _app.banner_slider = function() {
         
-        if( $('.locations-slider').length ) {
+        if( $('.locations-swiper').length ) {
             
-            const swiper = new Swiper('.locations-slider .swiper-container', {
+            const swiper = new Swiper('.locations-swiper .swiper-container', {
                 // Optional parameters
                 loop: true,
                 slidesPerView: 'auto',
@@ -177,7 +177,7 @@
                   },
             });
             
-            $(".locations-slider .swiper-container").each(function(index, element){
+            $(".locations-swiper .swiper-container").each(function(index, element){
                 const swiper = this.swiper;
                 swiper.update();
             });

@@ -995,6 +995,34 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_635ec655e7e46": {
+                    "key": "layout_635ec655e7e46",
+                    "name": "locations_slider",
+                    "label": "Locations Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_635ec661e7e47",
+                            "label": "",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Locations are managed Globally in the admin under Locations.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_635bd7609e480": {
                     "key": "layout_635bd7609e480",
                     "name": "logos_and_text_rows",
@@ -1685,11 +1713,6 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
-            },
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "default"
             }
         ],
         [
@@ -1716,5 +1739,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667051371
+    "modified": 1667156363
 }

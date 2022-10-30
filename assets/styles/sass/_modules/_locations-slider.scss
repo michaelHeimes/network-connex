@@ -1,0 +1,45 @@
+.locations-slider {
+	.inner {
+		padding-top: 2.9rem;
+		padding-bottom: 2.7rem;
+		@include breakpoint(medium) {
+			padding-top: 7.9rem;
+			padding-bottom: 5.7rem;
+		}
+	}
+	.left {
+		position: relative;
+		z-index: 3;
+		@include breakpoint(small down) {
+			margin-bottom: 2rem;
+		}
+	}
+	.locations-btn {
+		cursor: pointer;
+		min-width: 0;
+		width: 40px;
+		height: 40px;
+		border: 1.25px solid #94B53D;
+		border-radius: 3px;
+	&:nth-child(1) {
+		margin-right: 9px;
+	}
+	}
+	.swiper-container {
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			bottom: 0;
+			width: 50vw;
+			right: 100%;
+			background-color: $light-gray;
+		}
+		.swiper-slide {
+			width: auto;
+			flex: 0 0 auto;
+		}
+	}
+}
