@@ -1,0 +1,33 @@
+.page-template-page-opco {
+	.left {
+		position: relative;
+		z-index: 3;
+	}
+	.locations-btn {
+		min-width: 0;
+		width: 40px;
+		height: 40px;
+		border: 1.25px solid #94B53D;
+		border-radius: 3px;
+	&:nth-child(1) {
+		margin-right: 9px;
+	}
+	}
+	.swiper-container {
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			bottom: 0;
+			width: 50vw;
+			right: 100%;
+			background-color: $light-gray;
+		}
+		.swiper-slide {
+			width: auto;
+			flex: 0 0 auto;
+		}
+	}
+}

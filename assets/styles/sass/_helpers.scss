@@ -40,6 +40,19 @@
 	position: relative;
 }
 
+.green-bg,
+.blue-bg {
+	h2,
+	h3,
+	p {
+		color: $white;
+	}
+}
+
+.green-bg {
+	background-color: $brand-green;
+}
+
 .blue-bg {
 	background-color: $brand-blue;
 	h2,

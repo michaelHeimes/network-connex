@@ -9544,6 +9544,19 @@ footer#colophon .copyright p {
   position: relative;
 }
 
+.green-bg h2,
+.green-bg h3,
+.green-bg p,
+.blue-bg h2,
+.blue-bg h3,
+.blue-bg p {
+  color: #fff;
+}
+
+.green-bg {
+  background-color: #6BBE4A;
+}
+
 .blue-bg {
   background-color: #1C365F;
 }
@@ -10800,5 +10813,39 @@ footer#colophon .copyright p {
 }
 .page-template-page-home .pros-slider button.swiper-button-next {
   right: 0;
+}
+
+.page-template-page-opco .left {
+  position: relative;
+  z-index: 3;
+}
+.page-template-page-opco .locations-btn {
+  min-width: 0;
+  width: 40px;
+  height: 40px;
+  border: 1.25px solid #94B53D;
+  border-radius: 3px;
+}
+.page-template-page-opco .locations-btn:nth-child(1) {
+  margin-right: 9px;
+}
+.page-template-page-opco .swiper-container {
+  position: relative;
+}
+.page-template-page-opco .swiper-container:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: 50vw;
+  right: 100%;
+  background-color: #F2F2F4;
+}
+.page-template-page-opco .swiper-container .swiper-slide {
+  width: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 /*# sourceMappingURL=style.min.css.map */
