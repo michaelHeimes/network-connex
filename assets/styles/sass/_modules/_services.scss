@@ -1,6 +1,9 @@
 .services {
-	padding-top: 9.6rem;
+	padding-top: 3rem;
 	padding-bottom: 1rem;
+	@include breakpoint(medium) {
+		padding-top: 4.35rem;
+	}
 	.services-wrap {
 		.cell {
 			margin-bottom: 2.5rem;

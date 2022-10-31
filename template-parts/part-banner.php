@@ -2,7 +2,7 @@
 	$color_theme = $args['data']['color_theme'];
 	$background_image = $args['data']['background_image'];
 	$heading = $args['data']['heading'];
-	
+	$button_link = $args['data']['button_link'];
 ?>
 <header class="banner default-banner has-bg" color-theme="color-theme-<?php echo $color_theme;?>">
 	<div class="bg" style="background-image: url('<?php echo $background_image['url'];?>');"></div>

@@ -161,7 +161,7 @@
         
     } 
 
-    _app.banner_slider = function() {
+    _app.locations_slider = function() {
         
         if( $('.locations-swiper').length ) {
             
@@ -493,6 +493,7 @@
         
         // Custom Functions
         _app.banner_slider();
+        _app.locations_slider();
         _app.team_bios();
         _app.resource_filter();
     }

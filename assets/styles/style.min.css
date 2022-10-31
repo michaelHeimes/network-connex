@@ -10223,8 +10223,13 @@ footer#colophon .copyright p {
 }
 
 .services {
-  padding-top: 9.6rem;
+  padding-top: 3rem;
   padding-bottom: 1rem;
+}
+@media print, screen and (min-width: 40em) {
+  .services {
+    padding-top: 4.35rem;
+  }
 }
 .services .services-wrap .cell {
   margin-bottom: 2.5rem;
