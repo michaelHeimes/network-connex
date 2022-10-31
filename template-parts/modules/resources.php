@@ -11,7 +11,7 @@
 	?>
 	
 	<?php if ($terms):?>
-	<div class="left cell small-12 medium-3 large-shrink">
+	<div class="left cell small-12 tablet-shrink">
 		<div class="filter-taxonomy grid-x flex-dir-column light-gray-bg">
 			<div class="filter-label font-brandon color-blue">Filter</div>
 			<?php foreach ($terms as $term): ?>					
@@ -34,7 +34,7 @@
 	
 	// if there are some taxonomy terms, loop through each one and get the posts in that term
 	if($taxonomy_terms):?>
-	<div class="right cell small-12 medium-9 large-auto">
+	<div class="right cell small-12 tablet-auto">
 		<div class="filter-grid">
 		<?php
 		foreach($taxonomy_terms as $taxonomy_term):
@@ -72,7 +72,7 @@
 						<?php endif;?>
 					</div>
 		
-					<div class="cpts-wrap grid-x grid-padding-x small-up-2 medium-up-3 grid-20">
+					<div class="cpts-wrap grid-x grid-padding-x small-up-2 large-up-3 grid-20">
 		
 					<?php $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
 

@@ -5,7 +5,7 @@
 	$copy = get_sub_field('copy');
 	$button_link = get_sub_field('button_link');
 ?>
-<section class="module centered-copy <?php echo $background_color;?>-bg">
+<section class="module centered-copy image-left-copy-right <?php echo $background_color;?>-bg">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x align-middle">
 			<?php if( !empty($centered_heading) ):?>

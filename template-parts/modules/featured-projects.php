@@ -17,7 +17,7 @@
 				$grid_image = get_field('grid_image');
 				$grid_excerpt = get_field('grid_excerpt');
 			?>
-			<div class="cell text-center">
+			<div class="single-article cell text-center">
 				<article id="post-<?php the_ID(); ?>" <?php post_class('h-100'); ?> role="article">	
 					<a  class="color-white h-100 grid-x flex-dir-column align-justify" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 						<div class="inner has-bg grid-x align-center">

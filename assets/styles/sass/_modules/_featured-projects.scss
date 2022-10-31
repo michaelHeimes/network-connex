@@ -1,11 +1,21 @@
 .featured-projects {
-	padding-top: 5.8rem;
-	padding-bottom: 3.5rem;
+	padding-top: 3.8rem;
+	padding-bottom: 2.5rem;
+	
+	@include breakpoint(medium) {
+		padding-top: 5.8rem;
+		padding-bottom: 3.5rem;		
+	}
+	
 	h2 {
 		margin-bottom: 1.25em;
 	}
+	.grid-x.grid-20 .cell.single-article {
+		@include breakpoint(small down) {
+			margin-bottom: 2rem;
+		}
+	}
 	article {
-
 		.inner.grid-x {
 			flex: 1;
 			min-height: 68.427vw;

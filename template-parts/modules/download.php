@@ -6,7 +6,7 @@
 <section class="module download">
 	<div class="grid-container h-100">
 		<div class="grid-x grid-padding-x h-100">
-			<div class="cell small-12 medium-10 medium-offset-1 large-6 large-offset-3">
+			<div class="cell small-10 small-offset-1 large-6 large-offset-3">
 				<div class="grid-x grid-padding-x">					
 					<?php 
 					if( !empty( $image ) ): ?>
@@ -17,7 +17,7 @@
 					</div>
 					<?php endif; ?>
 					<div class="right cell small-12 medium-8 text-center">
-						<div class="light-gray-bg h-100 grid-x align-middle align-center">
+						<div class="light-gray-bg h-100 grid-x flex-dir-column align-middle align-center">
 							<h3><?php echo $name;?></h3>
 							<?php 
 							if( $file ):?>

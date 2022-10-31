@@ -1,6 +1,10 @@
 .centered-copy {
-	padding-top: 4.7rem;
-	padding-bottom: 2.75rem;
+	padding-top: 2.7rem;
+	padding-bottom: 2rem;
+	@include breakpoint(medium) {
+		padding-top: 4.7rem;
+		padding-bottom: 2.75rem;
+	}
 	.icons-labels {
 		padding-top: 0.95rem;
 		.cell {

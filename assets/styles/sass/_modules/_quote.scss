@@ -1,10 +1,17 @@
 .quote {
-	padding-top: 5.8rem;
-	padding-bottom: 5.85rem;
+	padding-top: 3rem;
+	padding-bottom: 3.5rem;
+	@include breakpoint(medium) {
+		padding-top: 5.8rem;
+		padding-bottom: 5.85rem;		
+	}
 	p.quote-text {
 		font-size: rem-calc(20);
 		line-height: 1.6;
-		margin-bottom: 2.75em;
+		margin-bottom: 1.75em;
+		@include breakpoint(medium) {
+			margin-bottom: 2.75em;
+		}
 	}
 	p.author {
 		font-weight: 500;

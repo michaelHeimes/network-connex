@@ -15,7 +15,7 @@
 			<div class="cell small-12 large-10 large-offset-1">
 			<?php foreach( $rows as $row ):?>
 				<div class="grid-x grid-padding-x align-middle">
-					<div class="left cell small-12 medium-2">
+					<div class="left cell small-12 medium-4 tablet-3">
 						<?php 
 						$image = $row['logo'];
 						if( !empty( $image ) ): ?>
@@ -24,7 +24,7 @@
 						</div>
 						<?php endif; ?>
 					</div>
-					<div class="right cell small-12 medium-10">
+					<div class="right cell small-12 medium-8 tablet-9">
 						<div class="text-wrap">
 							<?php echo $row['text'];?>
 						</div>

@@ -1,4 +1,8 @@
 .team {
+	padding-bottom: 3rem;
+	@include breakpoint(medium) {
+		padding-bottom: 5.3rem;
+	}
 	.team-wrap {
 		h2 {
 			margin-bottom: 1.48em;
@@ -19,7 +23,7 @@
 				left: 0;
 				right: 0;
 				bottom: 0;
-				background-color: #3C8CB8;
+				background-color: $brand-sky-blue;
 				transform: translate(-5px, -5px);
 				transition: transform .3s ease;
 			}
@@ -112,5 +116,10 @@
 		}
 	}
 	
-	}	
+	}
+	
+&:nth-child(even) .single-tm .inner a:before {
+	background-color: $brand-purple;
+}
+	
 }

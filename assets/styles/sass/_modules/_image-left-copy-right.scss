@@ -1,0 +1,7 @@
+.image-left-copy-right {
+	@include breakpoint(medium down) {
+		.left {
+			margin-bottom: 2rem;
+		}
+	}
+}

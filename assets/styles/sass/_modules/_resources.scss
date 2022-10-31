@@ -1,6 +1,9 @@
 .resources {
 	padding-top: 3.875rem;
 	.left {
+		@include breakpoint(medium down) {
+			margin-bottom: 2rem;
+		}
 		.filter-label {
 			font-weight: 900;
 			font-size: 24px;
@@ -10,6 +13,7 @@
 			padding-bottom: 2.22rem;
 		}
 		.filter-taxonomy {
+			display: inline-flex;
 			padding: 1.7rem 1.54rem 4rem;
 		}
 		button {

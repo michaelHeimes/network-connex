@@ -1,6 +1,10 @@
 .news-events {
-	padding-top: 10.2rem;
-	padding-bottom: 5.26rem;
+	padding-top: 5.2rem;
+	padding-bottom: 2.26rem;
+	@include breakpoint(medium) {
+		padding-top: 10.2rem;
+		padding-bottom: 5.26rem;
+	}
 	h2 {
 		margin-bottom: 1.15em;
 	}
