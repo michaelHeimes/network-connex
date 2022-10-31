@@ -5832,7 +5832,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   border-width: 6px;
   content: "";
   border-bottom-width: 0;
-  border-color: #6BBE4A transparent transparent;
+  border-color: #1C365F transparent transparent;
   position: absolute;
   top: 50%;
   margin-top: -3px;
@@ -5877,7 +5877,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   border-width: 6px;
   content: "";
   border-bottom-width: 0;
-  border-color: #6BBE4A transparent transparent;
+  border-color: #1C365F transparent transparent;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -9464,6 +9464,22 @@ header.site-header #top-bar-menu .menu-toggle-wrap a#menu-toggle.clicked span:nt
   bottom: 4px;
   -webkit-transform: translate(0px, -12px) rotate(45deg);
           transform: translate(0px, -12px) rotate(45deg);
+}
+
+#offcanvas-nav {
+  padding-top: 1.5rem;
+}
+#offcanvas-nav li button {
+  min-width: 0;
+}
+#offcanvas-nav li a {
+  font-weight: 900;
+  font-family: brandon-grotesque, roboto, Helvetica, Roboto, Arial, sans-serif;
+  color: #1C365F;
+  text-transform: uppercase;
+}
+#offcanvas-nav li ul.submenu {
+  padding-left: 1.5rem;
 }
 
 footer#colophon {

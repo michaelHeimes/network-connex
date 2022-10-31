@@ -19,8 +19,8 @@ $fields = get_fields();
 	
 					<?php get_template_part('template-parts/part', 'banner', array( 
 						'data'  => array(
-							'color_theme' => get_field('color_theme'),
-							'background_image' => get_field('background_image'),
+							'color_theme' => get_field('banner_color_theme'),
+							'background_image' => get_field('banner_background_image'),
 							'heading' => get_field('banner_heading'),
 						)) 
 					);?>

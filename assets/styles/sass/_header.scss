@@ -210,3 +210,21 @@ header.site-header {
 	}
 	
 }
+
+#offcanvas-nav {
+	padding-top: 1.5rem;
+	li {
+		button {
+			min-width: 0;
+		}
+		a {
+			font-weight: 900;
+			font-family: $font-brandon;
+			color: $brand-blue;
+			text-transform: uppercase;
+		}
+		ul.submenu {
+			padding-left: 1.5rem;
+		}
+	}
+}
