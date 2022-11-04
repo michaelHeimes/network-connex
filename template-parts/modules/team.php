@@ -3,7 +3,7 @@
 	$team_members = get_sub_field('team_members');
 ?>
 <section class="module team">
-	<div class="grid-container">
+	<div class="grid-container grid-16-container">
 		<div class="grid-x grid-padding-x">
 			<div class="team-wrap cell small-12 large-10 large-offset-1">
 				<h2 class="text-center"><?php echo $team_name;?></h2>

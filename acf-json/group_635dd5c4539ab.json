@@ -50,6 +50,13 @@
                 "operator": "==",
                 "value": "location"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "nti_location"
+            }
         ]
     ],
     "menu_order": 0,
@@ -64,5 +71,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667094600
+    "modified": 1667566432
 }

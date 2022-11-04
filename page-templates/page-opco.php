@@ -71,7 +71,7 @@ $fields = get_fields();
 									<?php endif;?>
 									
 									<?php if( $segment_columns = $fields['segment_columns'] ):?>
-										<div class="segment-columns grid-x grid-padding-x text-center">
+										<div class="segment-columns grid-x grid-padding-x">
 											<?php foreach ($segment_columns as $segment_column):?>
 												<div class="cell small-12 medium-6">
 													<?php echo $segment_column['segment_column'];?>

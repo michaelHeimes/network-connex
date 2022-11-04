@@ -74,9 +74,11 @@
 	}
 	.segment-columns {
 		padding-bottom: 1.15rem;
-		ul {
-			text-align: center;
-			list-style-position: inside;
+		> div > ul {
+			padding: .5rem 0 1.5rem 4rem;
+			ul {
+				padding: .5rem 0 .5rem .5rem;
+			}
 		}
 	}
 }

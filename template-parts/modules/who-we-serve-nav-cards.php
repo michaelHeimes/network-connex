@@ -2,7 +2,7 @@
 	$nav_cards = get_sub_field('nav_cards');
 ?>
 <section class="module who-we-serve-nav-cards">
-	<div class="grid-container">
+	<div class="grid-container grid-16-container">
 		<div class="nav-cards grid-x grid-padding-x grid-16 small-up-1 medium-up-2 large-up-3 align-center">
 			<?php foreach( $nav_cards as $nav_card ):
 				$image = $nav_card['image'];

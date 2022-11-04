@@ -1,0 +1,50 @@
+.location-cards {
+	padding-top: 3rem;
+	@include breakpoint(medium) {
+		padding-top: 4.88rem;
+	}
+	h2 {
+		margin-bottom: 2.75rem;
+		@include breakpoint(medium) {
+			margin-bottom: 4.15rem;
+		}
+	}
+	.location-grid {
+		padding-bottom: 3rem;
+		@include breakpoint(medium) {
+			padding-bottom: 5rem;
+		}
+	}
+	.location-card {
+		.inner {
+			flex-wrap: nowrap;
+			padding: 2.25rem 1rem;
+			@include breakpoint(tablet) {
+				padding: 3.7rem 1.5rem;
+			}
+			p {
+				font-size: rem-calc(16);
+				line-height: 1.2;
+				@include breakpoint(tablet) {
+					font-size: rem-calc(20);
+				}
+				&.name {
+					margin-bottom: 0.45rem;
+				}
+			}
+		}
+		
+	&.nti-location-card .inner p {
+		font-size: rem-calc(14);
+		line-height: 1.3;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		margin-bottom: 0.45em;
+		@include breakpoint(tablet) {
+			font-size: rem-calc(18);
+		}
+	}
+		
+	}
+
+}

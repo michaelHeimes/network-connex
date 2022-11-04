@@ -41,7 +41,7 @@
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.responsiveToggle.js
 
 // Equalize heights
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.equalizer.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.equalizer.js
 
 // Responsive Images
 //@prepros-prepend vendor/foundation/js/plugins/foundation.interchange.js

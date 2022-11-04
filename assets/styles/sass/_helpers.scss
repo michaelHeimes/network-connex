@@ -49,6 +49,10 @@
 	}
 }
 
+.white-bg {
+	background-color: $white;
+}
+
 .green-bg {
 	background-color: $brand-green;
 }
@@ -99,6 +103,11 @@
 
 .m-0 {
 	margin: 0;	
+}
+
+.grid-container.grid-16-container {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 }
 
 .grid-x.grid-16 {

@@ -995,6 +995,54 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6364ffaa9516c": {
+                    "key": "layout_6364ffaa9516c",
+                    "name": "location_cards",
+                    "label": "Location Cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6364ffb39516d",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_6364ffcf9516e",
+                            "label": "",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This module shows the Locations posts.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_635ec655e7e46": {
                     "key": "layout_635ec655e7e46",
                     "name": "locations_slider",
@@ -1739,5 +1787,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667156363
+    "modified": 1667563496
 }
