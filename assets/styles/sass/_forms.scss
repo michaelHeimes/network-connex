@@ -1,0 +1,84 @@
+body .gform_wrapper.gravity-theme {
+	text-align: left;
+	background-color: $white;
+	max-width: 770px;
+	margin: auto;
+	padding: 3.64rem 4.99rem;
+	p.gform_required_legend,
+		span.gfield_required {
+		position:absolute;
+		left:-10000px;
+		top:auto;
+		width:1px;
+		height:1px;
+		overflow:hidden;
+	}
+	.gform_fields {
+		grid-row-gap: 46px;
+	}
+	label,
+	label.gfield_label {
+		font-family: $font-brandon;
+		font-weight: 500;
+		font-size: rem-calc(16);
+		line-height: 1.25;		
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		margin-bottom: 0.23rem;
+	}
+	[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
+		box-shadow: 0 0 0;
+		border: 0;
+		border-bottom: 1px solid $black;
+		height: 2.45rem !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		&::placeholder {
+			color: #8D8D8D;
+			font-weight: 400;
+			font-size: rem-calc(16);
+			line-height: 1.25;
+		}
+	}
+	select {
+		border: 0;
+		border-bottom: 1px solid $black;
+		color: #8D8D8D;
+		font-weight: 400;
+		font-size: rem-calc(16);
+		line-height: 1.25;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='17' height='10' viewBox='0 0 17 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.02838 9.34589C8.45647 9.80966 9.20564 9.80966 9.63373 9.34589L16.4832 2.49639C16.947 2.0683 16.947 1.31913 16.4832 0.891039C16.0551 0.427271 15.306 0.427271 14.8779 0.891039L8.84889 6.92002L2.78423 0.891039C2.35614 0.427271 1.60697 0.427271 1.17888 0.891039C0.715113 1.31913 0.715113 2.0683 1.17888 2.49639L8.02838 9.34589Z' fill='%231C1A1A'/%3E%3C/svg%3E");
+		background-size: 16px;
+		background-position: 100% 50%;
+		background-repeat: no-repeat;
+
+		option {
+			&::placeholder {
+				color: #8D8D8D;
+				font-weight: 400;
+				font-size: rem-calc(16);
+				line-height: 1.25;
+			}
+		}
+	}
+	.gform_footer {
+		justify-content: flex-end;
+		padding-top: 1.5rem;
+		input.button {
+			min-width: 145px;
+		}
+	}
+	.gform_validation_errors,
+	.gfield_validation_message, 
+	.gform_wrapper .validation_message {
+		border: 0;
+		background: transparent;
+		padding: 1rem 0;
+		box-shadow: 0 0 0;
+		span.gform-icon.gform-icon--close {
+			display: none;
+		}
+	}
+}

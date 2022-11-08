@@ -1050,11 +1050,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_635ec661e7e47",
-                            "label": "",
-                            "name": "",
+                            "key": "field_63694b528d626",
+                            "label": "Locations",
+                            "name": "locations",
                             "aria-label": "",
-                            "type": "message",
+                            "type": "relationship",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1063,9 +1063,19 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Locations are managed Globally in the admin under Locations.",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
+                            "post_type": [
+                                "location"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "object",
+                            "min": "",
+                            "max": "",
+                            "elements": ""
                         }
                     ],
                     "min": "",
@@ -1787,5 +1797,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667563496
+    "modified": 1667844969
 }

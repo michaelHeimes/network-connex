@@ -167,7 +167,7 @@
             
             const swiper = new Swiper('.locations-swiper .swiper-container', {
                 // Optional parameters
-                loop: true,
+                loop: false,
                 slidesPerView: 'auto',
                 speed: 500,
                 spaceBetween: 50,
