@@ -1,6 +1,6 @@
 {
     "key": "group_635b1f2394d9e",
-    "title": "Resources: Brochures",
+    "title": "Resources: Collateral",
     "fields": [
         {
             "key": "field_635b1f2399086",
@@ -29,8 +29,8 @@
         },
         {
             "key": "field_635b20444f09d",
-            "label": "Brochure",
-            "name": "brochure",
+            "label": "Collateral",
+            "name": "collateral",
             "aria-label": "",
             "type": "file",
             "instructions": "",
@@ -58,7 +58,7 @@
             {
                 "param": "post_taxonomy",
                 "operator": "==",
-                "value": "resource_type:brochures"
+                "value": "resource_type:collateral"
             }
         ]
     ],
@@ -73,5 +73,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666916815
+    "modified": 1668183843
 }

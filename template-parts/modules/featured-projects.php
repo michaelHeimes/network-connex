@@ -8,7 +8,7 @@
 				<h2>Featured Projects</h2>
 			</div>
 			<div class="cell small-12 medium-shrink show-for-medium">
-				<a class="button" href="/resources">View All Projects</a>
+				<a class="button" href="/resources/#featured-projects">View All Projects</a>
 			</div>
 		</div>
 		<div class="grid-x grid-padding-x grid-20 small-up-1 medium-up-2 tablet-up-3">
@@ -39,7 +39,7 @@
 		</div>
 		<div class="grid-x grid-padding-x hide-for-medium">
 			<div class="cell small-12 text-center">
-				<a class="button" href="/resources">View All Projects</a>
+				<a class="button" href="/resources/#featured-projects">View All Projects</a>
 			</div>
 		</div>
 	</div>

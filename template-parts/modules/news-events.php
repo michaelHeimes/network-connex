@@ -23,14 +23,18 @@
 					?>
 					<div class="cell text-center color-white">
 						<article id="post-<?php the_ID(); ?>" <?php post_class('h-100'); ?> role="article">	
+							<?php if( get_field('outside_article_url') ):?>
+							<a class="h-100 color-white grid-x flex-dir-column align-justify" href="<?php the_field('outside_article_url');?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
+							<?php else:?>
 							<a class="h-100 color-white grid-x flex-dir-column align-justify" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+							<?php endif;?>
 								<div class="img-wrap">
 									<img src="<?php echo $grid_image['sizes']['post-thumb'];?>">
 								</div>
 								<div class="text-wrap h-100 relative">
 									<div class="inner h-100 white-bg">
 										<div class="date font-brandon">
-											<?php echo get_the_date(' F m, Y ');?>
+											<?php echo get_the_date(' F j, Y ');?>
 										</div>
 										<hr>
 										<h3 class="h5 color-black"><?php the_title();?></h3>

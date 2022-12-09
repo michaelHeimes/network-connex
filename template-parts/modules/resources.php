@@ -44,6 +44,8 @@
 				'taxonomy' => $taxonomy_term->slug,
 				'post_status' => 'publish',
 				'posts_per_page' => -1,
+				'orderby' => 'date',
+				'order'   => 'DESC',
 				'tax_query' => array(
 					array (
 						'taxonomy' => 'resource_type',
@@ -74,13 +76,15 @@
 		
 					<div class="cpts-wrap grid-x grid-padding-x small-up-2 large-up-3 grid-20">
 		
-					<?php $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
+					<?php $i = 1; while ( $query->have_posts($args) ) : $query->the_post(); ?>
 
-						<article class="resource-card <?php if($i >= 7){echo ' hidden';};?> cell" role="article">
+						<article class="resource-card<?php if($i >= 7){echo ' hidden';};?> cell" role="article">
 							<?php 
 							$grid_image = get_field('grid_image');
-							if( $taxonomy_term->slug == 'brochures'):?>
-							<a class="color-white" href="<?php the_field('brochure');?>" target="_blank">
+							if( get_field('outside_article_url') ):?>
+							<a class="color-white" href="<?php the_field('outside_article_url');?>" target="_blank">
+							<?php elseif( $taxonomy_term->slug == 'collateral'):?>
+							<a class="color-white" href="<?php the_field('collateral');?>" target="_blank">
 							<?php else:?>
 							<a class="color-white" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 							<?php endif;?>	
@@ -89,7 +93,7 @@
 								
 									<div class="bg mask grid-x align-middle align-center">
 										<span class="link-14 color-white">
-											<?php if( $taxonomy_term->slug == 'brochures') {
+											<?php if( $taxonomy_term->slug == 'collateral') {
 												echo 'Download';
 											} elseif($taxonomy_term->slug == 'videos') {
 												echo 'Watch';
@@ -101,7 +105,15 @@
 								
 								</div>
 					 
-								<h3 class="h4 text-center"><?php the_title(); ?></h3>
+								<h3 class="h4 text-center">
+									<?php 
+										if( $grid_title_override = get_field('grid_title_override') ) {
+											echo $grid_title_override;
+										} else {
+											the_title();
+										}
+									?>
+								</h3>
 							</a>
 						</article>
 					<?php $i++; endwhile; ?>

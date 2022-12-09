@@ -234,11 +234,9 @@
                 let scrollPos = $(openBio).offset().top - headerheight + (imgHeight * .5);
                 
                 if( $(scrollPos).length ) { 
-                    setTimeout(function() {
-                        $('html, body').stop(true).animate({
-                            scrollTop: scrollPos
-                        }, animationDuration, animationEasing);
-                    }, 3);
+                    $('html, body').stop(true).animate({
+                        scrollTop: scrollPos
+                    }, animationDuration, animationEasing);
                 }
                 
             }
@@ -250,23 +248,16 @@
                 let tm = $(this).parent().parent();
                 let siblingModuleActiveCard = $(tm).parentsUntil('.module.team').parent().siblings().find('.single-tm.bio-open');
                 let tmBio = $(tm).find('.tm-bio');
-
-                
                 
                 if( $(tm).hasClass('bio-open') ){
                     $(tm).removeClass('bio-open-only').removeClass('bio-open').css('margin-bottom', 16);
-                    setTimeout(function() {
-                        scrollToOpenBio();
-                    }, 3);
 
                 } else {
                     $(tm).addClass('bio-open');
                     
                     if( $(siblingModuleActiveCard).length ) {
                         $(siblingModuleActiveCard).removeClass('bio-open-only').removeClass('bio-open').css('margin-bottom', 16);
-                        setTimeout(function() {
-                            scrollToOpenBio();
-                        }, 3);
+                        //scrollToOpenBio();
                     }
                                         
                     if( $(tm).siblings().hasClass('bio-open') ) {
@@ -274,17 +265,13 @@
                         
                         $(tm).removeClass('bio-open-only');  
                         $(tm).siblings().removeClass('bio-open-only');  
-                        setBioContainerHeight();
                         $(tm).siblings().css('margin-bottom', 16);  
-                        setTimeout(function() {
-                            scrollToOpenBio();
-                        }, 3);
+                        setBioContainerHeight();
+                        //scrollToOpenBio();
                     } else {
                         $(tm).addClass('bio-open-only');
                         setBioContainerHeight();
-                        setTimeout(function() {
-                            scrollToOpenBio();
-                        }, 3);
+                        //scrollToOpenBio();
                     }
                     
 
