@@ -18,6 +18,10 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<link rel="stylesheet" href="https://use.typekit.net/zdj3xfv.css">
+	
+	<!-- icons -->
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico">
+	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-touch-icon.png">
 
 	<?php wp_head(); ?>
 </head>
