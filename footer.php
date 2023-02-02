@@ -23,9 +23,40 @@
 										<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 									</div>
 									<?php endif; ?>
+									<?php if( $address = get_field('address', 'option') ):
+										$directions = get_field('directions_url', 'option');
+									?>
+									<div class="address-wrap show-for-tablet">
+										<h3 class="h4">Headquarters</h3>
+										<?php if( !empty($directions) ):?>
+											<a href="<?php echo $directions;?>" target="_blank">
+										<?php endif;?>
+										<p><?php echo $address;?></p>
+										<?php if( !empty($directions) ):?>
+											</a>
+										<?php endif;?>
+									</div>
+									<?php endif;?>
+									<div class="footer-contact-link">
+										<a href="<?php echo home_url();?>/contact/">Contact Us</a>
+									</div>
 								</div>
 								<div class="cell small-12 tablet-9">
 									<?php network_connex_footer_links();?>
+									<?php if( $address = get_field('address', 'option') ):
+										$directions = get_field('directions_url', 'option');
+									?>
+									<div class="address-wrap hide-for-tablet">
+										<h3 class="h4">Headquarters</h3>
+										<?php if( !empty($directions) ):?>
+											<a href="<?php echo $directions;?>" target="_blank">
+										<?php endif;?>
+										<p><?php echo $address;?></p>
+										<?php if( !empty($directions) ):?>
+											</a>
+										<?php endif;?>
+									</div>
+									<?php endif;?>
 								</div>
 							</div>
 						</div>
