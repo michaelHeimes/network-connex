@@ -491,14 +491,16 @@
         }
         
         _app.case_study_download = function() {
-            
+     
             $(document).bind('gform_confirmation_loaded', function(event, formId){
                 console.log(formId);
                 if( formId === 2 ){  
-                    
+                                        
                     const download_file_url = acf_vars.download_file.url;
                     const download_file_name = acf_vars.download_file.filename;
                     const thankYouPage = acf_vars.thank_you_page;
+                    
+                    $('#gform_confirmation_wrapper_2').siblings('h2').hide();
                                         
                     $('body').append('<button id="download-cs-pdf" class="show-for-sr">download with blob</button>');
                     
@@ -529,9 +531,13 @@
                     }
                     dlbtn.click();
                     dlbtn.remove();
-                    
+                                        
                     setTimeout(function(){
-                        window.location.assign(thankYouPage);
+                        // Get current page slug and attached it as a url param to the next page
+                        const currentPageSlug = acf_vars.slug;
+                        const nextPageUrl = thankYouPage  + '?id=' + currentPageSlug;
+                        
+                        window.location.assign(nextPageUrl);
                     }, 2000);
 
                 }

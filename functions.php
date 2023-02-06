@@ -163,11 +163,18 @@ function network_connex_scripts() {
 	
 	//wp_enqueue_script( 'network-connex-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	
-	wp_localize_script( 'app-js', 'acf_vars', array(
-			'download_file' => get_field('download_file'),
-			'thank_you_page' => get_field('thank_you_page'),
-		)
-	);
+	if ( is_singular( 'resource' ) && has_term( 'case-studies', 'resource_type' ) ) {
+		global $post;
+		
+		wp_localize_script( 'app-js', 'acf_vars', array(
+				'download_file' => get_field('download_file'),
+				'thank_you_page' => get_field('thank_you_page'),
+				'thank_you_page' => get_field('thank_you_page'),
+				'slug' => $post->post_name,
+			)
+		);
+
+	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
