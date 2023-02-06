@@ -1,6 +1,6 @@
 {
     "key": "group_633ed735287c2",
-    "title": "Resources: Case Studies & News",
+    "title": "Resources: News",
     "fields": [
         {
             "key": "field_633ed7354a16c",
@@ -123,29 +123,17 @@
             {
                 "param": "post_taxonomy",
                 "operator": "==",
-                "value": "category:uncategorized"
-            },
-            {
-                "param": "post_taxonomy",
-                "operator": "!=",
-                "value": "resource_type:collateral"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "resource"
-            },
-            {
-                "param": "post_taxonomy",
-                "operator": "==",
                 "value": "resource_type:news-events"
             },
             {
                 "param": "post_taxonomy",
                 "operator": "!=",
                 "value": "resource_type:collateral"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "resource_type:case-studies"
             }
         ]
     ],
@@ -160,5 +148,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670529404
+    "modified": 1675354514
 }

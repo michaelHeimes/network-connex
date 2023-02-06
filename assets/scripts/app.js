@@ -490,11 +490,58 @@
 
         }
         
+        _app.case_study_download = function() {
+            
+            $(document).bind('gform_confirmation_loaded', function(event, formId){
+                console.log(formId);
+                if( formId === 2 ){  
+                    
+                    const download_file_url = acf_vars.download_file.url;
+                    const download_file_name = acf_vars.download_file.filename;
+                    const thankYouPage = acf_vars.thank_you_page;
+                                        
+                    $('body').append('<button id="download-cs-pdf" class="show-for-sr">download with blob</button>');
+                    
+                    function downloadFile(url, fileName){
+                        //Check the Browser type and download the File.
+                        var isIE = false || !!document.documentMode;
+                        if (isIE) {
+                            window.navigator.msSaveBlob(blob, fileName);
+                        } else {
+                            
+                            fetch(url, { method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer' })
+                            .then(res => res.blob())
+                            .then(res => {
+                                const aElement = document.createElement('a');
+                                aElement.setAttribute('download', fileName);
+                                const href = URL.createObjectURL(res);
+                                aElement.href = href;
+                                // aElement.setAttribute('href', href);
+                                aElement.setAttribute('target', '_blank');
+                                aElement.click();
+                                URL.revokeObjectURL(href);
+                            });
+                        }
+                    };
+                    const dlbtn = document.querySelector('#download-cs-pdf');
+                    dlbtn.onclick =function () {
+                      downloadFile(download_file_url, download_file_name);
+                    }
+                    dlbtn.click();
+                    dlbtn.remove();
+                    
+                    setTimeout(function(){
+                        window.location.assign(thankYouPage);
+                    }, 2000);
+
+                }
+            });
+        }
+        
     }
             
     _app.init = function() {
-        
-        // Standard Functions
+                // Standard Functions
         _app.foundation_init();
         _app.emptyParentLinks();
         _app.fixed_nav_hack();
@@ -505,6 +552,7 @@
         _app.locations_slider();
         _app.team_bios();
         _app.resource_filter();
+        _app.case_study_download();
     }
     
     
