@@ -89,7 +89,14 @@
     var _app = window._app || {};
     
     _app.foundation_init = function() {
-        $(document).foundation();
+        $('.entry-content p').each(function(){
+            if( $(this).find('iframe[src*="youtube.com"]') ) {
+                $(this).find('iframe').wrap('<div class="responsive-embed widescreen"></div>');
+            }
+            if( $(this).find('iframe[src*="vimeo.com"]') ) {
+                $(this).find('iframe').wrap('<div class="responsive-embed widescreen"></div>');
+            }
+        });
     }
         
     _app.emptyParentLinks = function() {
@@ -125,6 +132,10 @@
     }
     
     // Custom Functions
+    
+    _app.responsive_embed = function  () {
+        console.log("loaded");
+    }
     
     _app.banner_slider = function() {
         
@@ -554,6 +565,7 @@
         _app.display_on_load();
         
         // Custom Functions
+        _app.responsive_embed();
         _app.banner_slider();
         _app.locations_slider();
         _app.team_bios();
