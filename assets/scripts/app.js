@@ -89,16 +89,9 @@
     var _app = window._app || {};
     
     _app.foundation_init = function() {
-        $('.entry-content p').each(function(){
-            if( $(this).find('iframe[src*="youtube.com"]') ) {
-                $(this).find('iframe').wrap('<div class="responsive-embed widescreen"></div>');
-            }
-            if( $(this).find('iframe[src*="vimeo.com"]') ) {
-                $(this).find('iframe').wrap('<div class="responsive-embed widescreen"></div>');
-            }
-        });
+        $(document).foundation();
     }
-        
+            
     _app.emptyParentLinks = function() {
             
         $('.menu li a[href="#"]').click(function(e) {
@@ -134,7 +127,14 @@
     // Custom Functions
     
     _app.responsive_embed = function  () {
-        console.log("loaded");
+        $('.entry-content p').each(function(){
+            if( $(this).find('iframe[src*="youtube.com"]') ) {
+                $(this).find('iframe').wrap('<div class="responsive-embed widescreen"></div>');
+            }
+            if( $(this).find('iframe[src*="vimeo.com"]') ) {
+                $(this).find('iframe').wrap('<div class="responsive-embed widescreen"></div>');
+            }
+        });
     }
     
     _app.banner_slider = function() {

@@ -3,8 +3,10 @@
 	$copy = get_sub_field('copy');
 	$icons_labels = get_sub_field('icons_label');
 	$button_link = get_sub_field('button_link');
+	$rtp = get_sub_field('remove_top_padding');
+	$rbp = get_sub_field('remove_bottom_padding');
 ?>
-<section class="module centered-copy <?php echo $background_color;?>-bg">
+<section class="module centered-copy <?php echo $background_color;?>-bg <?php if($rtp) {echo ' ntp';} if($rtp) {echo ' nbp';};?>">
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x">
 			<div class="copy-wrap cell small-12 large-10 large-offset-1 text-center">
